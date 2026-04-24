@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-04-23",
+  "updated": "2026-04-24",
   "entries": [
     {
       "pmid": "41661120",
@@ -9,8 +9,8 @@
       "year": 2026,
       "doi": "",
       "first_seen": "2026-04-19",
-      "last_seen": "2026-04-19",
-      "times_seen": 1,
+      "last_seen": "2026-04-24",
+      "times_seen": 2,
       "sources": [
         "sci_digest"
       ],
@@ -20,6 +20,11 @@
       "tier_history": [
         {
           "date": "2026-04-19",
+          "source": "sci_digest",
+          "tier": "SKIM"
+        },
+        {
+          "date": "2026-04-24",
           "source": "sci_digest",
           "tier": "SKIM"
         }
@@ -33,8 +38,8 @@
       "year": 2026,
       "doi": "",
       "first_seen": "2026-04-19",
-      "last_seen": "2026-04-19",
-      "times_seen": 1,
+      "last_seen": "2026-04-24",
+      "times_seen": 2,
       "sources": [
         "sci_digest"
       ],
@@ -44,6 +49,11 @@
       "tier_history": [
         {
           "date": "2026-04-19",
+          "source": "sci_digest",
+          "tier": "HIGH"
+        },
+        {
+          "date": "2026-04-24",
           "source": "sci_digest",
           "tier": "HIGH"
         }
@@ -60,8 +70,8 @@
       "year": 2025,
       "doi": "10.1080/09638288.2025.2599840",
       "first_seen": "2026-04-19",
-      "last_seen": "2026-04-19",
-      "times_seen": 1,
+      "last_seen": "2026-04-24",
+      "times_seen": 2,
       "sources": [
         "sci_digest"
       ],
@@ -72,6 +82,11 @@
       "tier_history": [
         {
           "date": "2026-04-19",
+          "source": "sci_digest",
+          "tier": "MEDIUM"
+        },
+        {
+          "date": "2026-04-24",
           "source": "sci_digest",
           "tier": "MEDIUM"
         }
@@ -88,8 +103,8 @@
       "year": 2026,
       "doi": "10.1177/10538135251393517",
       "first_seen": "2026-04-19",
-      "last_seen": "2026-04-19",
-      "times_seen": 1,
+      "last_seen": "2026-04-24",
+      "times_seen": 2,
       "sources": [
         "sci_digest"
       ],
@@ -100,6 +115,11 @@
       "tier_history": [
         {
           "date": "2026-04-19",
+          "source": "sci_digest",
+          "tier": "HIGH"
+        },
+        {
+          "date": "2026-04-24",
           "source": "sci_digest",
           "tier": "HIGH"
         }
@@ -117,8 +137,8 @@
       "year": 2025,
       "doi": "10.1186/s12984-025-01649-1",
       "first_seen": "2026-04-19",
-      "last_seen": "2026-04-19",
-      "times_seen": 1,
+      "last_seen": "2026-04-24",
+      "times_seen": 2,
       "sources": [
         "sci_digest"
       ],
@@ -128,6 +148,11 @@
       "tier_history": [
         {
           "date": "2026-04-19",
+          "source": "sci_digest",
+          "tier": "MEDIUM"
+        },
+        {
+          "date": "2026-04-24",
           "source": "sci_digest",
           "tier": "MEDIUM"
         }
@@ -144,8 +169,8 @@
       "year": 2025,
       "doi": "",
       "first_seen": "2026-04-19",
-      "last_seen": "2026-04-19",
-      "times_seen": 1,
+      "last_seen": "2026-04-24",
+      "times_seen": 2,
       "sources": [
         "sci_digest"
       ],
@@ -155,6 +180,11 @@
       "tier_history": [
         {
           "date": "2026-04-19",
+          "source": "sci_digest",
+          "tier": "SKIM"
+        },
+        {
+          "date": "2026-04-24",
           "source": "sci_digest",
           "tier": "SKIM"
         }
@@ -168,8 +198,8 @@
       "year": 2025,
       "doi": "10.1016/j.apmr.2025.04.015",
       "first_seen": "2026-04-19",
-      "last_seen": "2026-04-19",
-      "times_seen": 1,
+      "last_seen": "2026-04-24",
+      "times_seen": 2,
       "sources": [
         "sci_digest"
       ],
@@ -180,6 +210,11 @@
       "tier_history": [
         {
           "date": "2026-04-19",
+          "source": "sci_digest",
+          "tier": "HIGH"
+        },
+        {
+          "date": "2026-04-24",
           "source": "sci_digest",
           "tier": "HIGH"
         }
@@ -197,8 +232,8 @@
       "year": 2026,
       "doi": "",
       "first_seen": "2026-04-19",
-      "last_seen": "2026-04-19",
-      "times_seen": 1,
+      "last_seen": "2026-04-24",
+      "times_seen": 2,
       "sources": [
         "sci_digest"
       ],
@@ -209,6 +244,11 @@
       "tier_history": [
         {
           "date": "2026-04-19",
+          "source": "sci_digest",
+          "tier": "MEDIUM"
+        },
+        {
+          "date": "2026-04-24",
           "source": "sci_digest",
           "tier": "MEDIUM"
         }
