@@ -1,7 +1,1132 @@
 {
   "version": 1,
-  "updated": "2026-04-24",
+  "updated": "2026-05-07",
   "entries": [
+    {
+      "pmid": "41862205",
+      "title": "Repurposing Dexmedetomidine: Pharmacological Hypothermia and Dual Locomotor/Bladder Recovery after SCI",
+      "journal": "Journal of Neuroscience",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "draft"
+      ],
+      "themes": [
+        "T02",
+        "T11"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "sci_digest",
+          "source_date": "2026-04-25",
+          "tier": "HIGH",
+          "status": "draft"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "41853689",
+      "title": "Neurogenic Bowel and Bladder Prevalence: 88-91% in 1,056 Brazilian SCI Patients",
+      "journal": "Journal of Spinal Cord Medicine",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "draft"
+      ],
+      "themes": [
+        "T04"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "sci_digest",
+          "source_date": "2026-04-25",
+          "tier": "HIGH",
+          "status": "draft"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "41832341",
+      "title": "Agentic AI in Healthcare: The First Systematic Map (Scoping Review)",
+      "journal": "npj Digital Medicine",
+      "year": 2026,
+      "doi": "10.1038/s41746-026-02517-5",
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "draft"
+      ],
+      "themes": [
+        "A01"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-04-25",
+          "tier": "STRATEGIC",
+          "status": "draft"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "41722575",
+      "title": "Intensive rehabilitation after subacute spinal cord injury: more is not always better",
+      "journal": "Lancet Neurology",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "T01",
+        "T10"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "sci_digest",
+          "source_date": "2026-04-27",
+          "tier": "Top-3",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "41652436",
+      "title": "Walking rehabilitation in incomplete SCI: robotic exoskeleton-assisted training (RCT) \u2014 Fourier X2",
+      "journal": "BioMedical Engineering OnLine",
+      "year": 2026,
+      "doi": "10.1186/s12938-026-01532-7",
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "draft"
+      ],
+      "themes": [
+        "T01",
+        "T09",
+        "T10"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "sci_digest",
+          "source_date": "2026-04-25",
+          "tier": "HIGH",
+          "status": "draft"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "41625485",
+      "title": "Ambient AI Cuts Work Exhaustion, Not Fulfillment: 24-Week Stepped-Wedge RCT",
+      "journal": "NEJM AI",
+      "year": 2025,
+      "doi": "10.1056/AIoa2500945",
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "draft"
+      ],
+      "themes": [
+        "A03"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-04-25",
+          "tier": "STRATEGIC",
+          "status": "draft"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "41497288",
+      "title": "Ambient AI Scribes in Clinical Practice: A Randomized Trial",
+      "journal": "NEJM AI",
+      "year": 2026,
+      "doi": "10.1056/AIoa2501000",
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "draft"
+      ],
+      "themes": [
+        "A03"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-04-25",
+          "tier": "STRATEGIC",
+          "status": "draft"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "41362083",
+      "title": "Effectiveness of FES-assisted locomotor training on walking outcomes following incomplete SCI: SR and meta-analysis",
+      "journal": "",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "draft"
+      ],
+      "themes": [
+        "T01",
+        "T09"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "sci_digest",
+          "source_date": "2026-04-25",
+          "tier": "HIGH",
+          "status": "draft"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "41216066",
+      "title": "AI-Driven Rehabilitation Robotics: Motor Gains Real But Evidence Heterogeneous",
+      "journal": "Cureus",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "draft"
+      ],
+      "themes": [
+        "A07"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-04-25",
+          "tier": "WATCH",
+          "status": "draft"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "41169643",
+      "title": "AI and Physician Burnout: The Productivity Paradox Essay",
+      "journal": "Learning Health Systems",
+      "year": 2025,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "draft"
+      ],
+      "themes": [
+        "A04"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-04-25",
+          "tier": "WATCH",
+          "status": "draft"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "41154231",
+      "title": "Global SCI Epidemiology: 14.5M Affected; Non-Traumatic SCI Projected to Dominate by 2050",
+      "journal": "",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "draft"
+      ],
+      "themes": [
+        "T08"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "sci_digest",
+          "source_date": "2026-04-25",
+          "tier": "HIGH",
+          "status": "draft"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "41035592",
+      "title": "AI in CDS Rule-Based Systems: 30% ADE Reduction in Diabetes",
+      "journal": "Cureus",
+      "year": 2025,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "draft"
+      ],
+      "themes": [
+        "A09"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-04-25",
+          "tier": "SKIM",
+          "status": "draft"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40927746",
+      "title": "Machine Learning Predicts Discharge FIM in SCI IRF: RF/XGBoost Outperform GLMs",
+      "journal": "Frontiers in Rehabilitation Sciences",
+      "year": 2025,
+      "doi": "10.3389/fresc.2025.1594753",
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "draft"
+      ],
+      "themes": [
+        "T01",
+        "T08"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "sci_digest",
+          "source_date": "2026-04-25",
+          "tier": "HIGH",
+          "status": "draft"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40771228",
+      "title": "Algorithmic Bias in Public Health AI: Structural Data Exclusion Problem",
+      "journal": "Frontiers",
+      "year": 2025,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "draft"
+      ],
+      "themes": [
+        "A06"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-04-25",
+          "tier": "WATCH",
+          "status": "draft"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40672471",
+      "title": "Three-Arm Scribe RCT: Utilization Below 33% Is the Adoption Bottleneck",
+      "journal": "",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "draft"
+      ],
+      "themes": [
+        "A03"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-04-25",
+          "tier": "WATCH",
+          "status": "draft"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40421017",
+      "title": "Multimodal LLM Matches Specialist Panel for Lung Cancer Planning",
+      "journal": "",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A02"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-05-05",
+          "tier": "WATCH",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40421016",
+      "title": "Multi-Agent AI System for Inpatient Care Coordination: Reducing Length of Stay Through Automated Barrier Identification",
+      "journal": "NEJM AI",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A01"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-05-05",
+          "tier": "STRATEGIC",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40421015",
+      "title": "Deep Learning Prediction of Neurological Recovery After Traumatic SCI Using Early Inpatient Rehab Data: Multicenter Validation",
+      "journal": "Journal of Neurotrauma",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A07"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-05-05",
+          "tier": "STRATEGIC",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40421014",
+      "title": "LLMs as Clinical Reasoning Assessors in Medical Education",
+      "journal": "",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A11"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-05-05",
+          "tier": "SKIM",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40421013",
+      "title": "Hallucination Rates in Clinical Large Language Models: Systematic Review and Meta-Analysis of 58 Studies",
+      "journal": "Lancet Digital Health",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A06"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-05-05",
+          "tier": "STRATEGIC",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40421012",
+      "title": "Conversational AI for Heart Failure Medication Adherence",
+      "journal": "",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A08"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-05-05",
+          "tier": "SKIM",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40421011",
+      "title": "Ambient AI Documentation in Outpatient Neurology: Mixed-Methods Implementation Study",
+      "journal": "Neurology",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A03"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-05-05",
+          "tier": "STRATEGIC",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40421010",
+      "title": "FDA PCCP Framework for Adaptive AI Medical Devices",
+      "journal": "",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A05"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-05-05",
+          "tier": "SKIM",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40421009",
+      "title": "AI Note Summarization Saves 26 Min/Day per Clinician",
+      "journal": "",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A04"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-05-05",
+          "tier": "WATCH",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40421008",
+      "title": "Clinician Trust Calibration in AI Decision Support",
+      "journal": "",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A10"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-05-05",
+          "tier": "WATCH",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40421007",
+      "title": "ML-Driven CDS Alert Prioritization Reduces Alert Fatigue 41%",
+      "journal": "",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A09"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-05-05",
+          "tier": "WATCH",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40421006",
+      "title": "SMART-on-FHIR AI Clinical Decision Support Across Epic and Oracle Health",
+      "journal": "",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A12"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-05-05",
+          "tier": "WATCH",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40421005",
+      "title": "Diagnostic Accuracy of GPT-5 vs. Emergency Physicians in Chest Pain",
+      "journal": "",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A02"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-05-05",
+          "tier": "WATCH",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40421004",
+      "title": "Differential Accuracy of Large Language Models in Clinical Recommendations Across Race, Ethnicity, and Insurance Status",
+      "journal": "Nature Medicine",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A06"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-05-05",
+          "tier": "STRATEGIC",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40421003",
+      "title": "Agentic AI for Prior Authorization: Reducing Administrative Burden and Delays in Specialty Care",
+      "journal": "NEJM Catalyst Innovations in Care Delivery",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A01"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-05-05",
+          "tier": "STRATEGIC",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40421002",
+      "title": "Machine Learning Prediction of FIM Discharge Scores in Inpatient Rehabilitation Facilities: A Multicenter Validation Study",
+      "journal": "Archives of Physical Medicine and Rehabilitation",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A07"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-05-05",
+          "tier": "STRATEGIC",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40421001",
+      "title": "Randomized Controlled Trial of Ambient AI Documentation on Physician Time-in-Chart and Patient Face Time in Primary Care",
+      "journal": "JAMA Internal Medicine",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A03"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-05-05",
+          "tier": "STRATEGIC",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40400020",
+      "title": "GPT-4 Performance on ABPMR Board Exam",
+      "journal": "",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A02"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-05-05",
+          "tier": "SKIM",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40400019",
+      "title": "Autonomous Prior Authorization AI in Physiatry",
+      "journal": "",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A01"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-05-05",
+          "tier": "WATCH",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40400018",
+      "title": "NLP for Rehab Therapy Documentation in Inpatient Rehabilitation Facilities",
+      "journal": "",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A07"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-05-05",
+          "tier": "WATCH",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40399668",
+      "title": "Closed-Loop Vagus Nerve Stimulation and SCI Recovery: Sham-Controlled RCT; Phase III Enrolling",
+      "journal": "Nature",
+      "year": 2025,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "draft"
+      ],
+      "themes": [
+        "T01",
+        "T09"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "sci_digest",
+          "source_date": "2026-04-25",
+          "tier": "HIGH",
+          "status": "draft"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "40308811",
+      "title": "Patient-Facing Chatbots: 61% Feel Misunderstood; Equity Paradox",
+      "journal": "SAGE Digital Health",
+      "year": 2025,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-07",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "draft"
+      ],
+      "themes": [
+        "A08"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "ai_health_digest",
+          "source_date": "2026-04-25",
+          "tier": "WATCH",
+          "status": "draft"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "39885668",
+      "title": "Multi-Target Neural Circuit Reconstruction and Enhancement in Spinal Cord Injury",
+      "journal": "Neural Regeneration Research",
+      "year": 2026,
+      "doi": "",
+      "first_seen": "2026-04-19",
+      "last_seen": "2026-05-07",
+      "times_seen": 3,
+      "sources": [
+        "sci_digest"
+      ],
+      "themes": [
+        "T10",
+        "T01",
+        "T02",
+        "T09"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-04-19",
+          "source": "sci_digest",
+          "tier": "MEDIUM"
+        },
+        {
+          "date": "2026-04-24",
+          "source": "sci_digest",
+          "tier": "MEDIUM"
+        },
+        {
+          "date": "2026-05-07",
+          "source": "sci_digest",
+          "source_date": "2026-04-25",
+          "tier": "HIGH",
+          "status": "draft"
+        }
+      ],
+      "action_tags": [
+        "\ud83d\udcda",
+        "\ud83d\udd2c"
+      ],
+      "source_status": [
+        "draft"
+      ]
+    },
     {
       "pmid": "41661120",
       "title": "Electrophysiologic Characteristics of Epidural Spinal Signals in Preclinical Models of Spinal Cord Stimulation",
@@ -29,7 +1154,8 @@
           "tier": "SKIM"
         }
       ],
-      "action_tags": []
+      "action_tags": [],
+      "source_status": []
     },
     {
       "pmid": "41623937",
@@ -59,9 +1185,10 @@
         }
       ],
       "action_tags": [
-        "📚",
-        "🔬"
-      ]
+        "\ud83d\udcda",
+        "\ud83d\udd2c"
+      ],
+      "source_status": []
     },
     {
       "pmid": "41404984",
@@ -92,9 +1219,10 @@
         }
       ],
       "action_tags": [
-        "📋",
-        "🏥"
-      ]
+        "\ud83d\udccb",
+        "\ud83c\udfe5"
+      ],
+      "source_status": []
     },
     {
       "pmid": "41252289",
@@ -125,10 +1253,11 @@
         }
       ],
       "action_tags": [
-        "📝",
-        "🎓",
-        "🔬"
-      ]
+        "\ud83d\udcdd",
+        "\ud83c\udf93",
+        "\ud83d\udd2c"
+      ],
+      "source_status": []
     },
     {
       "pmid": "40442684",
@@ -158,9 +1287,10 @@
         }
       ],
       "action_tags": [
-        "📚",
-        "🎓"
-      ]
+        "\ud83d\udcda",
+        "\ud83c\udf93"
+      ],
+      "source_status": []
     },
     {
       "pmid": "40323263",
@@ -189,7 +1319,8 @@
           "tier": "SKIM"
         }
       ],
-      "action_tags": []
+      "action_tags": [],
+      "source_status": []
     },
     {
       "pmid": "40320023",
@@ -220,43 +1351,11 @@
         }
       ],
       "action_tags": [
-        "📋",
-        "📝",
-        "📣"
-      ]
-    },
-    {
-      "pmid": "39885668",
-      "title": "Multi-Target Neural Circuit Reconstruction and Enhancement in Spinal Cord Injury",
-      "journal": "Neural Regeneration Research",
-      "year": 2026,
-      "doi": "",
-      "first_seen": "2026-04-19",
-      "last_seen": "2026-04-24",
-      "times_seen": 2,
-      "sources": [
-        "sci_digest"
+        "\ud83d\udccb",
+        "\ud83d\udcdd",
+        "\ud83d\udce3"
       ],
-      "themes": [
-        "T10",
-        "T01"
-      ],
-      "tier_history": [
-        {
-          "date": "2026-04-19",
-          "source": "sci_digest",
-          "tier": "MEDIUM"
-        },
-        {
-          "date": "2026-04-24",
-          "source": "sci_digest",
-          "tier": "MEDIUM"
-        }
-      ],
-      "action_tags": [
-        "📚",
-        "🔬"
-      ]
+      "source_status": []
     }
   ]
 }
