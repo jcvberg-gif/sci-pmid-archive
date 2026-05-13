@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>[Rehab Tool] Liaison Communication Builder — Week 20</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:760px;margin:0 auto;padding:20px;color:#1a1a2e;background:#f5f6fa;}
+.header{background:#003366;color:#fff;padding:20px 24px;border-radius:8px 8px 0 0;}
+.header .org{font-size:.7rem;color:#FFB81C;letter-spacing:1px;text-transform:uppercase;font-weight:600;}
+.header h1{font-size:1.3rem;font-weight:700;margin:4px 0 2px;}
+.header .sub{font-size:.8rem;color:#a0b8d8;}
+.badge{display:inline-block;background:#FFB81C;color:#002244;padding:3px 10px;border-radius:12px;font-size:.72rem;font-weight:700;margin-top:8px;}
+.body{background:#fff;padding:24px;border:1px solid #e0e3ea;border-top:none;}
+h2{color:#003366;font-size:1rem;margin:20px 0 8px;border-bottom:2px solid #FFB81C;padding-bottom:4px;}
+table{width:100%;border-collapse:collapse;font-size:.88rem;margin:10px 0;}
+th{background:#003366;color:#fff;padding:7px 10px;text-align:left;font-size:.78rem;}
+td{padding:7px 10px;border-bottom:1px solid #e0e3ea;}
+tr:nth-child(even) td{background:#f5f6fa;}
+code{background:#f0f4ff;border:1px solid #b8ccf0;border-radius:3px;padding:1px 5px;font-size:.82rem;color:#003366;}
+.checklist{list-style:none;padding:0;}
+.checklist li{padding:5px 0;border-bottom:1px solid #e0e3ea;font-size:.88rem;}
+.checklist li::before{content:"☐ ";color:#003366;font-weight:700;}
+.idea-list{padding-left:20px;font-size:.88rem;}
+.idea-list li{padding:4px 0;}
+.footer{background:#f5f6fa;border:1px solid #e0e3ea;border-top:none;padding:12px 24px;font-size:.75rem;color:#6c757d;border-radius:0 0 8px 8px;}
+.pill{display:inline-block;background:#d5f5e3;color:#1e8449;padding:2px 10px;border-radius:12px;font-size:.72rem;font-weight:700;}
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="org">Mary Free Bed · Rehabilitation Hospital</div>
+  <h1>Liaison Communication Builder</h1>
+  <div class="sub">Structured templates for transfer &amp; care coordination</div>
+  <div class="badge">Week 20 · Tool 8 of 12</div>
+</div>
+<div class="body">
+
+<p><strong>ISO Week:</strong> 20 &nbsp;·&nbsp; <strong>Topic Index:</strong> 8/12 &nbsp;·&nbsp; <strong>Date:</strong> 2026-05-13<br>
+<strong>Target:</strong> Rehab Liaisons · Intake Coordinators · Care Coordinators</p>
+
+<h2>Problem Statement</h2>
+<p>Rehab liaisons generate dozens of coordination communications weekly — transfer readiness notifications, insurance auth follow-ups, admission confirmations, and denial letters. Each type targets a different recipient, requires different clinical elements, and triggers a different action chain. Drafting from scratch is slow, inconsistent, and risks omitting critical details.</p>
+
+<h2>Tool Design</h2>
+<table>
+<tr><th>Dimension</th><th>Detail</th></tr>
+<tr><td><strong>Communication Types</strong></td><td>Transfer Readiness · Auth Follow-Up · Admission Confirm · Clinical Clarify · Denial+Alt · Bed Hold</td></tr>
+<tr><td><strong>Clinical Inputs</strong></td><td>Diagnosis category · FIM tier · Expected LOS · 8 clinical flags</td></tr>
+<tr><td><strong>Output</strong></td><td>Structured template with placeholders · SmartPhrase name · Pre-send action checklist</td></tr>
+<tr><td><strong>Urgency Levels</strong></td><td>Routine · Urgent · Emergent (color-coded pill)</td></tr>
+<tr><td><strong>Auth-Specific Fields</strong></td><td>Auth status · Days pending (shown only for Auth Follow-Up type)</td></tr>
+</table>
+
+<h2>Epic SmartPhrase Pairings</h2>
+<table>
+<tr><th>Communication Type</th><th>SmartPhrase Name</th></tr>
+<tr><td>Transfer Readiness Notification</td><td><code>.MFBTRANSFERREADY</code></td></tr>
+<tr><td>Insurance Auth Status Follow-Up</td><td><code>.MFBAUTHFOLLOWUP</code></td></tr>
+<tr><td>Admission Confirmation</td><td><code>.MFBADMITCONFIRM</code></td></tr>
+<tr><td>Clinical Clarification Request</td><td><code>.MFBCLINICALCLARIFY</code></td></tr>
+<tr><td>Denial + Alternative Offer</td><td><code>.MFBDENIALALTERNATIVE</code></td></tr>
+<tr><td>Bed Hold / Reservation Request</td><td><code>.MFBBEDHOLD</code></td></tr>
+</table>
+<p><strong>To create in Epic:</strong> Tools → SmartPhrase Manager → New → Name = [phrase without dot] → paste template → Save</p>
+
+<h2>Testing Checklist</h2>
+<ul class="checklist">
+<li>All 6 types generate unique, complete, non-overlapping templates</li>
+<li>Clinical flags populate correctly in all 6 output paths</li>
+<li>Urgency pill: green (routine) / yellow (urgent) / red (emergent)</li>
+<li>Auth fields appear <em>only</em> when Auth Follow-Up is selected</li>
+<li>Copy-to-clipboard toast fires and dismisses after copy</li>
+<li>Reset clears all fields and hides output panel</li>
+<li>Print: buttons hidden, output area fully expanded, colors preserved</li>
+<li>PHI banner visible at all screen widths</li>
+<li>Mobile &lt;768px: columns stack, all controls remain usable</li>
+<li>No data in localStorage or sessionStorage after reset</li>
+<li>Placeholder text visible when no template has been generated</li>
+<li>Long "Action Requested" text wraps cleanly in output area</li>
+</ul>
+
+<h2>Next Iteration Ideas</h2>
+<ol class="idea-list">
+<li><strong>Payer-specific language variants</strong> — auto-adjust auth language by payer type (Medicare, Medicaid, commercial HMO, workers' comp)</li>
+<li><strong>Session history (no PHI)</strong> — track template types generated in current session for workflow analytics</li>
+<li><strong>Multi-language patient-facing variants</strong> — Spanish admission confirmation and arrival instructions</li>
+<li><strong>PAS Calc integration (Tool 1 → Tool 8)</strong> — auto-populate FIM tier from Week 1 PAS score tool</li>
+<li><strong>Escalation chain visualizer</strong> — flowchart: who to contact next and when if no response within urgency window</li>
+<li><strong>Regulatory compliance flags</strong> — auto-add CMS PASRR / discharge notice language for applicable types</li>
+</ol>
+
+<h2>Guardrails Verified</h2>
+<ul class="checklist">
+<li>No PHI in tool — all patient fields use bracketed placeholders [PATIENT LAST NAME]</li>
+<li>PHI banner displayed prominently at top of page</li>
+<li>No localStorage or sessionStorage for any field values</li>
+<li>Input validation: message type required before generation</li>
+<li>MFB navy (#003366) and gold (#FFB81C) branding throughout</li>
+<li>Standalone single-file HTML — no external CDN, fonts, or JS libraries</li>
+</ul>
+
+</div>
+<div class="footer">
+Generated by MFB Rehab Tool Builder &nbsp;·&nbsp; ISO Week 20 &nbsp;·&nbsp; 2026-05-13<br>
+Next: Week 21 → Topic 9 → ARC-EX Candidacy Screener
+</div>
+</body>
+</html>
