@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MFB Liaison Communication Builder · Week 20</title>
+<style>
+:root{
+  --navy:#003366;--navy-dark:#002244;--gold:#FFB81C;--gold-light:#FFF3CD;
+  --white:#fff;--gray-light:#f5f6fa;--gray:#e0e3ea;--gray-dark:#6c757d;
+  --text:#1a1a2e;--danger:#c0392b;--success:#27ae60;
+  --radius:8px;--shadow:0 2px 8px rgba(0,51,102,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:var(--gray-light);color:var(--text);min-height:100vh;}
+
+/* PHI Banner */
+.phi-banner{background:var(--danger);color:#fff;text-align:center;
+  padding:8px 16px;font-weight:700;font-size:.85rem;letter-spacing:.5px;}
+
+/* Header */
+header{background:var(--navy);color:#fff;padding:16px 24px;
+  display:flex;align-items:center;gap:16px;box-shadow:var(--shadow);}
+.logo-block{display:flex;flex-direction:column;}
+.logo-block .org{font-size:.7rem;color:var(--gold);letter-spacing:1px;
+  text-transform:uppercase;font-weight:600;}
+.logo-block h1{font-size:1.2rem;font-weight:700;line-height:1.2;}
+.logo-block .sub{font-size:.78rem;color:#a0b8d8;margin-top:2px;}
+.week-badge{margin-left:auto;background:var(--gold);color:var(--navy-dark);
+  padding:4px 12px;border-radius:20px;font-size:.72rem;font-weight:700;
+  white-space:nowrap;}
+
+/* Layout */
+main{max-width:1120px;margin:20px auto;padding:0 14px;
+  display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media(max-width:768px){main{grid-template-columns:1fr;}}
+
+/* Card */
+.card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;}
+.card-header{background:var(--navy);color:#fff;padding:11px 15px;
+  font-weight:600;font-size:.88rem;display:flex;align-items:center;gap:7px;}
+.card-body{padding:15px;}
+
+/* Form */
+.form-group{margin-bottom:13px;}
+label{display:block;font-size:.76rem;font-weight:700;color:var(--navy);
+  margin-bottom:3px;text-transform:uppercase;letter-spacing:.3px;}
+.sel-wrap{position:relative;}
+.sel-wrap::after{content:'▼';position:absolute;right:9px;top:50%;
+  transform:translateY(-50%);font-size:.6rem;color:var(--navy);pointer-events:none;}
+select,input[type=text],input[type=number],textarea{
+  width:100%;padding:7px 10px;border:1.5px solid var(--gray);border-radius:5px;
+  font-size:.88rem;color:var(--text);background:#fff;transition:border-color .2s;
+  appearance:none;-webkit-appearance:none;}
+select:focus,input:focus,textarea:focus{
+  outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(0,51,102,.09);}
+textarea{resize:vertical;min-height:72px;}
+
+.chk-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px;}
+.chk-item{display:flex;align-items:center;gap:6px;font-size:.83rem;
+  cursor:pointer;padding:4px 6px;border-radius:4px;transition:background .15s;}
+.chk-item:hover{background:var(--gray-light);}
+.chk-item input[type=checkbox]{width:15px;height:15px;
+  accent-color:var(--navy);cursor:pointer;flex-shrink:0;}
+
+.sec-div{font-size:.72rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:.5px;color:var(--navy);padding:5px 0 3px;
+  border-bottom:2px solid var(--gold);margin-bottom:11px;}
+
+/* Buttons */
+.btn-group{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px;}
+.btn{padding:9px 16px;border:none;border-radius:5px;font-size:.83rem;
+  font-weight:600;cursor:pointer;transition:all .18s;
+  display:flex;align-items:center;gap:5px;}
+.btn-primary{background:var(--navy);color:#fff;}
+.btn-primary:hover{background:var(--navy-dark);}
+.btn-gold{background:var(--gold);color:var(--navy-dark);}
+.btn-gold:hover{background:#e6a51a;}
+.btn-outline{background:#fff;color:var(--navy);border:1.5px solid var(--navy);}
+.btn-outline:hover{background:var(--gray-light);}
+.btn-danger{background:#fff;color:var(--danger);border:1.5px solid var(--danger);}
+.btn-danger:hover{background:#fef5f5;}
+
+/* Output */
+.out-area{background:var(--gray-light);border:1.5px solid var(--gray);
+  border-radius:5px;padding:12px 14px;font-family:'Courier New',monospace;
+  font-size:.8rem;line-height:1.65;white-space:pre-wrap;word-break:break-word;
+  min-height:180px;max-height:480px;overflow-y:auto;color:var(--text);}
+.out-placeholder{color:var(--gray-dark);font-family:-apple-system,sans-serif;
+  font-size:.88rem;font-style:italic;text-align:center;padding:44px 20px;}
+
+/* Urgency pills */
+.upill{display:inline-block;padding:2px 11px;border-radius:12px;
+  font-size:.73rem;font-weight:700;text-transform:uppercase;margin-bottom:9px;}
+.uroutine{background:#d5f5e3;color:#1e8449;}
+.uurgent{background:#fef9e7;color:#b7950b;}
+.uemergent{background:#fde8e8;color:var(--danger);}
+
+/* SmartPhrase box */
+.sp-box{background:#f0f4ff;border:1.5px solid #b8ccf0;border-radius:5px;
+  padding:9px 13px;font-size:.78rem;margin-top:10px;}
+.sp-label{font-weight:700;color:var(--navy);font-size:.72rem;
+  text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;}
+
+/* Action list */
+.act-list{list-style:none;padding:0;}
+.act-list li{display:flex;align-items:flex-start;gap:7px;
+  padding:5px 0;border-bottom:1px solid var(--gray);font-size:.83rem;}
+.act-list li:last-child{border-bottom:none;}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--gold);
+  flex-shrink:0;margin-top:4px;}
+
+/* Toast */
+.toast{position:fixed;bottom:22px;right:22px;background:var(--success);
+  color:#fff;padding:11px 18px;border-radius:7px;font-weight:600;
+  font-size:.83rem;box-shadow:0 4px 12px rgba(0,0,0,.2);
+  transform:translateY(70px);opacity:0;transition:all .3s;z-index:999;}
+.toast.show{transform:translateY(0);opacity:1;}
+
+.hidden{display:none!important;}
+.help{font-size:.72rem;color:var(--gray-dark);margin-top:2px;}
+
+/* Print */
+@media print{
+  .phi-banner,.card-header{print-color-adjust:exact;-webkit-print-color-adjust:exact;}
+  .btn-group{display:none;}
+  main{grid-template-columns:1fr;gap:10px;}
+  .out-area{max-height:none;font-size:9pt;}
+  header{print-color-adjust:exact;-webkit-print-color-adjust:exact;}
+}
+</style>
+</head>
+<body>
+
+<div class="phi-banner">⚠&nbsp; DO NOT ENTER PROTECTED HEALTH INFORMATION (PHI) — TEMPLATE BUILDER ONLY &nbsp;⚠</div>
+
+<header>
+  <div class="logo-block">
+    <span class="org">Mary Free Bed · Rehabilitation Hospital</span>
+    <h1>Liaison Communication Builder</h1>
+    <span class="sub">Structured templates for transfer &amp; care coordination</span>
+  </div>
+  <div class="week-badge">Week 20 · Tool 8 of 12</div>
+</header>
+
+<main>
+  <!-- ── INPUT PANEL ── -->
+  <div class="card">
+    <div class="card-header">📋 Build Your Template</div>
+    <div class="card-body">
+
+      <div class="sec-div">Communication Type</div>
+
+      <div class="form-group">
+        <label for="commType">Message Type <span style="color:red">*</span></label>
+        <div class="sel-wrap">
+          <select id="commType" onchange="updateVis()">
+            <option value="">— Select type —</option>
+            <option value="transfer_ready">Transfer Readiness Notification</option>
+            <option value="auth_followup">Insurance Auth Status Follow-Up</option>
+            <option value="admission_confirm">Admission Confirmation</option>
+            <option value="clinical_clarify">Clinical Clarification Request</option>
+            <option value="denial_alt">Denial + Alternative Offer</option>
+            <option value="bed_hold">Bed Hold / Reservation Request</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="urgency">Urgency Level</label>
+        <div class="sel-wrap">
+          <select id="urgency">
+            <option value="routine">Routine</option>
+            <option value="urgent">Urgent (same-day response needed)</option>
+            <option value="emergent">Emergent (&lt;2 hr response needed)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="sec-div">Clinical Context</div>
+
+      <div class="form-group">
+        <label for="diagCat">Diagnosis Category</label>
+        <div class="sel-wrap">
+          <select id="diagCat">
+            <option value="TBI">Traumatic Brain Injury (TBI)</option>
+            <option value="stroke">Stroke / CVA</option>
+            <option value="SCI">Spinal Cord Injury (SCI)</option>
+            <option value="ortho">Orthopaedic / Post-Surgical</option>
+            <option value="cardiac">Cardiac / Pulmonary</option>
+            <option value="neuro">Neurological (Other)</option>
+            <option value="other">Other / Not Specified</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="funcStatus">Functional Status Tier</label>
+        <div class="sel-wrap">
+          <select id="funcStatus">
+            <option value="total">Total Assist (FIM 1–2)</option>
+            <option value="max">Maximum Assist (FIM 2–3)</option>
+            <option value="mod">Moderate Assist (FIM 3–4)</option>
+            <option value="min">Minimum Assist (FIM 4–5)</option>
+            <option value="sup">Supervision / Modified Indep (FIM 5–6)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="los">Expected LOS (days)</label>
+        <input type="number" id="los" min="1" max="120" placeholder="e.g. 14">
+      </div>
+
+      <div class="sec-div">Clinical Flags</div>
+
+      <div class="chk-grid">
+        <label class="chk-item"><input type="checkbox" id="fw"> Wound / Skin</label>
+        <label class="chk-item"><input type="checkbox" id="ft"> Trach / Vent</label>
+        <label class="chk-item"><input type="checkbox" id="fd"> Dysphagia / PO Risk</label>
+        <label class="chk-item"><input type="checkbox" id="fc"> Cognitive Impairment</label>
+        <label class="chk-item"><input type="checkbox" id="fb"> Behavioral Concerns</label>
+        <label class="chk-item"><input type="checkbox" id="ff"> Complex Family Dynamics</label>
+        <label class="chk-item"><input type="checkbox" id="fe"> Equipment Needs</label>
+        <label class="chk-item"><input type="checkbox" id="fi"> Isolation Precautions</label>
+      </div>
+
+      <!-- Auth-specific fields -->
+      <div id="authFields" class="hidden">
+        <div class="sec-div" style="margin-top:13px">Auth Details</div>
+        <div class="form-group">
+          <label for="authStat">Authorization Status</label>
+          <div class="sel-wrap">
+            <select id="authStat">
+              <option value="pending">Pending — Initial Submission</option>
+              <option value="partial">Partial Auth Received</option>
+              <option value="denied">Denied — Appealing</option>
+              <option value="p2p">Peer-to-Peer Requested</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="daysPend">Days Auth Has Been Pending</label>
+          <input type="number" id="daysPend" min="0" max="60" placeholder="e.g. 3">
+        </div>
+      </div>
+
+      <div class="sec-div" style="margin-top:13px">Action Requested</div>
+
+      <div class="form-group">
+        <label for="ask">Specific Ask of Recipient</label>
+        <textarea id="ask" placeholder="e.g. Please confirm bed availability by 1400 today; Please call back with peer-to-peer approval by EOD"></textarea>
+        <div class="help">Populates the closing call-to-action in the template.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="senderRole">Sender Role / Title</label>
+        <div class="sel-wrap">
+          <select id="senderRole">
+            <option value="Rehab Liaison">Rehab Liaison</option>
+            <option value="Intake Coordinator">Intake Coordinator</option>
+            <option value="Care Coordinator">Care Coordinator</option>
+            <option value="Admissions Coordinator">Admissions Coordinator</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="generate()">⚡ Generate Template</button>
+        <button class="btn btn-danger" onclick="resetAll()">↺ Reset</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── OUTPUT PANEL ── -->
+  <div class="card">
+    <div class="card-header">📨 Generated Template</div>
+    <div class="card-body">
+
+      <div id="placeholder" class="out-placeholder">
+        Select a message type and complete the form,<br>then click <strong>Generate Template</strong>.
+      </div>
+
+      <div id="outSection" class="hidden">
+        <div id="urgPill"></div>
+        <div class="out-area" id="tplOut"></div>
+
+        <div class="sp-box">
+          <div class="sp-label">Epic SmartPhrase Pairing</div>
+          <div id="spText" style="color:#334;line-height:1.55"></div>
+        </div>
+
+        <div style="margin-top:13px">
+          <div class="sec-div">Pre-Send Action Checklist</div>
+          <ul class="act-list" id="actList"></ul>
+        </div>
+
+        <div class="btn-group">
+          <button class="btn btn-gold" onclick="copyTpl()">📋 Copy as Epic SmartPhrase</button>
+          <button class="btn btn-outline" onclick="window.print()">🖨 Print</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const DIAG={TBI:'Traumatic Brain Injury',stroke:'Stroke/CVA',SCI:'Spinal Cord Injury',
+  ortho:'Orthopaedic/Post-Surgical',cardiac:'Cardiac/Pulmonary',
+  neuro:'Neurological (Other)',other:'Diagnosis Not Specified'};
+const FUNC={total:'Total Assist (FIM 1–2)',max:'Maximum Assist (FIM 2–3)',
+  mod:'Moderate Assist (FIM 3–4)',min:'Minimum Assist (FIM 4–5)',
+  sup:'Supervision/Modified Independent (FIM 5–6)'};
+const AUTH={pending:'Pending — Initial Submission',partial:'Partial Authorization Received',
+  denied:'Denied — Appeal in Progress',p2p:'Peer-to-Peer Review Requested'};
+const FLAGS={fw:'active wound/skin care needs',ft:'tracheostomy/ventilator management',
+  fd:'dysphagia/aspiration risk',fc:'cognitive impairment',
+  fb:'behavioral/safety concerns',ff:'complex family dynamics requiring support',
+  fe:'specialized equipment needs',fi:'isolation precautions in effect'};
+
+function updateVis(){
+  const v=document.getElementById('commType').value;
+  document.getElementById('authFields').classList.toggle('hidden',v!=='auth_followup');
+}
+
+function getFlags(){
+  return Object.entries(FLAGS).filter(([id])=>document.getElementById(id).checked).map(([,l])=>l);
+}
+
+function flagBlock(flags){
+  if(!flags.length)return'  None noted.';
+  return flags.map((f,i)=>`  ${i+1}. ${f[0].toUpperCase()+f.slice(1)}`).join('\n');
+}
+
+function generate(){
+  const ct=document.getElementById('commType').value;
+  if(!ct){alert('Please select a Communication Type first.');return;}
+  const urg=document.getElementById('urgency').value;
+  const diag=DIAG[document.getElementById('diagCat').value]||'';
+  const func=FUNC[document.getElementById('funcStatus').value]||'';
+  const los=document.getElementById('los').value;
+  const ask=(document.getElementById('ask').value.trim())||'Please respond at your earliest convenience.';
+  const role=document.getElementById('senderRole').value;
+  const flags=getFlags();
+  const fl=flagBlock(flags);
+  const losT=los?`${los}-day`:'TBD-day';
+  const urgL={routine:'ROUTINE',urgent:'URGENT',emergent:'EMERGENT'}[urg];
+  const authStat=AUTH[document.getElementById('authStat').value]||'';
+  const daysP=document.getElementById('daysPend').value;
+
+  let tpl='',sp='',acts=[];
+
+  if(ct==='transfer_ready'){
+    tpl=
+`[${urgL}] TRANSFER READINESS NOTIFICATION
+Mary Free Bed Rehabilitation Hospital
+Date: [DATE OF CONTACT]
+
+TO:   [REFERRING FACILITY — CASE MANAGER / SOCIAL WORKER]
+FROM: Mary Free Bed — ${role}
+RE:   Patient Transfer Referral — [PATIENT LAST NAME], [FIRST INITIAL]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PATIENT OVERVIEW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Primary Diagnosis:   ${diag}
+Functional Status:   ${func}
+Anticipated IPR LOS: ${losT} program
+
+Clinical Flags:
+${fl}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TRANSFER READINESS STATUS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Admission Type:          Inpatient Rehabilitation (IPR)
+Bed Assignment:          [UNIT / BED]
+Target Admit Date/Time:  [DATE] at [TIME]
+Authorization Status:    [AUTH NUMBER / PENDING]
+
+TRANSPORT REQUIREMENTS:
+  □ Mode:               [Ambulance / Family / Other]
+  □ Oxygen:             [Yes / No — specify LPM if yes]
+  □ IV Access:          [Yes / No]
+  □ Special positioning: [specify if applicable]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DOCUMENTATION TO ACCOMPANY TRANSFER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  □ Current H&P / Discharge Summary
+  □ Most recent labs (CBC, CMP, INR if applicable)
+  □ Imaging reports relevant to admission diagnosis
+  □ Medication reconciliation list
+  □ Wound care orders / photo documentation (if applicable)
+  □ Most recent therapy notes (PT / OT / SLP)
+  □ Insurance card / authorization letter
+  □ Patient/family contact information
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REQUESTED ACTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${ask}
+
+Contact our admissions line at [MFB ADMISSIONS PHONE] with any questions.
+
+Respectfully,
+[YOUR NAME]
+${role}
+Mary Free Bed Rehabilitation Hospital
+[DIRECT PHONE] | [SECURE FAX]`;
+    sp='.MFBTRANSFERREADY';
+    acts=['Confirm authorization number before transmitting',
+      'Verify bed assignment with charge nurse prior to sending',
+      'Confirm transport mode and estimated arrival time',
+      'Ensure transfer documentation packet is complete',
+      'Update Epic referral status to "Accepted — Transfer Scheduled"',
+      'Flag isolation precautions to receiving unit if applicable'];
+
+  }else if(ct==='auth_followup'){
+    const pendLine=daysP?`Authorization pending for ${daysP} business day(s).`:'Authorization submission date: [DATE SUBMITTED].';
+    tpl=
+`[${urgL}] AUTHORIZATION STATUS FOLLOW-UP
+Mary Free Bed Rehabilitation Hospital
+Date: [DATE OF CONTACT]
+
+TO:   [INSURANCE COMPANY — UTILIZATION MANAGEMENT / AUTH LINE]
+FROM: Mary Free Bed — ${role}
+RE:   IPR Authorization — [PATIENT LAST NAME, FIRST INITIAL] | DOB: [DOB] | Member ID: [MEMBER ID]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AUTHORIZATION REFERENCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Payer:         [INSURANCE COMPANY NAME]
+Plan Type:     [HMO / PPO / MCR / MCD / Other]
+Reference / Case #: [REFERENCE NUMBER]
+Auth Status:   ${authStat}
+${pendLine}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLINICAL SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Primary Diagnosis:   ${diag}
+Functional Status:   ${func}
+Requested IPR LOS:   ${losT}
+Clinical Justification: Patient requires intensive, coordinated, hospital-level
+rehabilitation due to [DESCRIBE MEDICAL COMPLEXITY / FUNCTIONAL DEFICITS].
+
+Clinical Flags of Note:
+${fl}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SUPPORTING DOCUMENTATION ON FILE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  □ Physician order for IPR admission
+  □ Functional assessment (FIM scoring)
+  □ Therapy evaluations — PT / OT / SLP
+  □ Medical records — acute hospitalization
+  □ Attending attestation of medical necessity
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REQUESTED ACTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${ask}
+
+For clinical questions or to schedule a peer-to-peer review:
+MFB Medical Director: [PHYSICIAN NAME] — [DIRECT LINE]
+
+Respectfully,
+[YOUR NAME]
+${role}
+Mary Free Bed Rehabilitation Hospital
+[DIRECT PHONE] | [SECURE FAX]`;
+    sp='.MFBAUTHFOLLOWUP';
+    acts=['Confirm reference/case number before transmitting',
+      'Attach clinical justification letter if denial is pending',
+      'Log call time, rep name, and reference number in Epic',
+      'Set 24-hour follow-up tickler if no response',
+      'Alert attending physician if peer-to-peer is needed',
+      'Document auth attempt in Epic authorization module'];
+
+  }else if(ct==='admission_confirm'){
+    tpl=
+`ADMISSION CONFIRMATION
+Mary Free Bed Rehabilitation Hospital
+Date: [DATE OF CONTACT]
+
+TO:   [REFERRING PHYSICIAN / PATIENT FAMILY CONTACT]
+FROM: Mary Free Bed — ${role}
+RE:   IPR Admission Confirmation — [PATIENT LAST NAME], [FIRST INITIAL]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ADMISSION DETAILS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Admitting Diagnosis:    ${diag}
+Scheduled Admit Date:   [DATE]
+Estimated Admit Time:   [TIME]
+Unit Assignment:        [UNIT / FLOOR]
+Attending Physiatrist:  [PHYSICIAN NAME]
+Authorization:          [AUTH NUMBER / PAYER NAME]
+Expected Program LOS:   ${losT}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WHAT TO EXPECT AT ADMISSION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  • Welcome packet provided upon arrival
+  • Initial team evaluation within 24 hours of admission
+  • Therapy schedule begins Day 1 or Day 2 (medically appropriate)
+  • Family meeting scheduled within first 72 hours
+  • Interdisciplinary team: Physiatry, PT, OT, SLP, Nursing,
+    Social Work, Psychology (as indicated)
+
+Functional Status at Admission: ${func}
+
+Clinical Considerations:
+${fl}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ARRIVAL INSTRUCTIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  • Enter via: [MAIN ENTRANCE / specify]
+  • Bring: Photo ID, insurance card, current medication list,
+    advance directive (if available)
+  • Parking: [RELEVANT INFO]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REQUESTED ACTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${ask}
+
+Questions? Contact [MFB ADMISSIONS PHONE] between [HOURS].
+
+Respectfully,
+[YOUR NAME]
+${role}
+Mary Free Bed Rehabilitation Hospital`;
+    sp='.MFBADMITCONFIRM';
+    acts=['Confirm bed is available and assigned in Epic',
+      'Verify insurance authorization is in place',
+      'Send welcome packet to patient/family if address available',
+      'Notify charge nurse of confirmed admission time',
+      'Ensure intake paperwork is queued in Epic',
+      'Brief admitting physiatrist on clinical flags'];
+
+  }else if(ct==='clinical_clarify'){
+    tpl=
+`[${urgL}] CLINICAL CLARIFICATION REQUEST
+Mary Free Bed Rehabilitation Hospital
+Date: [DATE OF CONTACT]
+
+TO:   [REFERRING PHYSICIAN / SPECIALIST NAME]
+FROM: Mary Free Bed — ${role}
+RE:   Clinical Inquiry — Patient [PATIENT LAST NAME], [FIRST INITIAL]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PATIENT CONTEXT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Primary Diagnosis:     ${diag}
+Current Func. Status:  ${func}
+Proposed IPR Admit:    [DATE]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ITEMS REQUIRING CLARIFICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  1. [CLINICAL QUESTION 1 — e.g., Weight-bearing status post-op]
+  2. [CLINICAL QUESTION 2 — e.g., Wound care protocol / dressing orders]
+  3. [CLINICAL QUESTION 3 — if applicable]
+
+Relevant Clinical Flags:
+${fl}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+INFORMATION NEEDED FROM YOUR TEAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  □ Updated orders / activity restrictions
+  □ Specialist follow-up plan and timeline
+  □ Relevant imaging / procedure reports
+  □ Updated medication orders (specify: [DRUG CLASS / REASON])
+  □ Other: [SPECIFY]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REQUESTED ACTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${ask}
+
+Thank you for your partnership in coordinating this patient's care.
+
+Respectfully,
+[YOUR NAME]
+${role}
+Mary Free Bed Rehabilitation Hospital
+[DIRECT PHONE] | [SECURE FAX]`;
+    sp='.MFBCLINICALCLARIFY';
+    acts=['Document clinical question in Epic referral notes',
+      'Set callback reminder within urgency window',
+      'Confirm admitting physiatrist is aware of outstanding questions',
+      'Do not confirm admission date until clarification is received',
+      'Route updated orders to MFB admissions team immediately on receipt'];
+
+  }else if(ct==='denial_alt'){
+    tpl=
+`DENIAL NOTIFICATION + ALTERNATIVE OPTIONS
+Mary Free Bed Rehabilitation Hospital
+Date: [DATE OF CONTACT]
+
+TO:   [REFERRING HOSPITAL — CASE MANAGER / SOCIAL WORKER]
+FROM: Mary Free Bed — ${role}
+RE:   IPR Review Outcome — [PATIENT LAST NAME], [FIRST INITIAL]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REVIEW OUTCOME
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+After clinical review, this patient's current presentation for Inpatient
+Rehabilitation (IPR) does not meet IPR criteria at this time.
+
+Primary Diagnosis:   ${diag}
+Functional Status:   ${func}
+
+Clinical Flags:
+${fl}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REASON FOR NON-ACCEPTANCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  □ Medical instability — not safe for intensive rehab at this time
+  □ Functional status below IPR threshold — SNF more appropriate
+  □ Clinical information insufficient — additional documentation required
+  □ Insurance authorization not secured
+  □ Other: [SPECIFY]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ALTERNATIVE PATHWAYS OFFERED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  1. Skilled Nursing Facility (SNF) — continued medical oversight + therapy
+  2. Home Health Rehab — if medically stable and safe home environment confirmed
+  3. MFB Outpatient Rehab — for patients who can tolerate outpatient level of care
+  4. Re-evaluate for IPR in [TIMEFRAME] if patient status improves
+  5. Other: [SPECIFY]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REQUESTED ACTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${ask}
+
+We are committed to finding the most appropriate level of care.
+Please reach out with any questions.
+
+Respectfully,
+[YOUR NAME]
+${role}
+Mary Free Bed Rehabilitation Hospital
+[DIRECT PHONE] | [SECURE FAX]`;
+    sp='.MFBDENIALALTERNATIVE';
+    acts=['Document denial decision and clinical rationale in Epic',
+      'Notify referring facility within 2 business hours of decision',
+      'Offer warm handoff to SNF liaison / discharge planner if available',
+      'Record denial reason code in Epic referral module',
+      'Follow up in 3–5 days if re-evaluation pathway was offered',
+      'Ensure attending physiatrist co-signs denial documentation'];
+
+  }else if(ct==='bed_hold'){
+    tpl=
+`[${urgL}] BED HOLD / RESERVATION REQUEST
+Mary Free Bed Rehabilitation Hospital
+Date: [DATE OF CONTACT]
+
+TO:   [MFB CHARGE NURSE / ADMISSIONS COORDINATOR / BED BOARD]
+FROM: ${role} — [YOUR NAME]
+RE:   Bed Hold Request — [PATIENT LAST NAME], [FIRST INITIAL]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PATIENT PROFILE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Primary Diagnosis:  ${diag}
+Functional Status:  ${func}
+Anticipated LOS:    ${losT}
+
+Clinical Flags:
+${fl}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BED REQUIREMENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Unit Preference: [TBI UNIT / SCI UNIT / GENERAL REHAB / NO PREFERENCE]
+Room Type:       [Private / Semi-private — private only if medical need]
+
+Special Requirements:
+  □ Bariatric bed / equipment
+  □ Negative pressure / isolation room
+  □ Proximity to nursing station (behavioral / fall risk)
+  □ Ground floor (specify reason)
+  □ Other: [SPECIFY]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TIMELINE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Requested Hold Date:    [DATE]
+Target Admission Time:  [TIME]
+Authorization Status:   [AUTH NUMBER / PENDING — expiration: DATE]
+Hold Expiration:        [DATE / TIME — if applicable]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REQUESTED ACTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${ask}
+
+Please confirm hold via Epic bed board or contact [ADMISSIONS LINE].
+
+Respectfully,
+[YOUR NAME]
+${role}
+Mary Free Bed Rehabilitation Hospital`;
+    sp='.MFBBEDHOLD';
+    acts=['Confirm bed hold in Epic bed board with expiration time',
+      'Verify special room requirements with charge nurse',
+      'Ensure authorization covers anticipated admission date',
+      'Set reminder to confirm or release hold 2 hours before deadline',
+      'Notify transport coordinator of anticipated arrival time',
+      'Alert unit of isolation precautions before patient arrival'];
+  }
+
+  // Render urgency pill
+  const pillClass={routine:'uroutine',urgent:'uurgent',emergent:'uemergent'}[urg];
+  document.getElementById('urgPill').innerHTML=
+    `<span class="upill ${pillClass}">${urgL}</span>`;
+
+  // Render template
+  document.getElementById('tplOut').textContent=tpl;
+
+  // SmartPhrase
+  document.getElementById('spText').innerHTML=
+    `Suggested name: <strong>${sp}</strong><br>`+
+    `Epic path: <em>Tools → SmartPhrase Manager → New → Name: <strong>${sp.replace('.','')}</strong> → paste template → Save</em>`;
+
+  // Action checklist
+  const ul=document.getElementById('actList');
+  ul.innerHTML='';
+  acts.forEach(a=>{
+    const li=document.createElement('li');
+    li.innerHTML=`<span class="dot"></span><span>${a}</span>`;
+    ul.appendChild(li);
+  });
+
+  document.getElementById('placeholder').classList.add('hidden');
+  document.getElementById('outSection').classList.remove('hidden');
+}
+
+function copyTpl(){
+  const txt=document.getElementById('tplOut').textContent;
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(txt).then(()=>toast('✓ Template copied to clipboard!'));
+  }else{
+    const el=document.createElement('textarea');
+    el.value=txt;document.body.appendChild(el);el.select();
+    document.execCommand('copy');document.body.removeChild(el);
+    toast('✓ Template copied to clipboard!');
+  }
+}
+
+function toast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2600);
+}
+
+function resetAll(){
+  ['commType','urgency','diagCat','funcStatus','authStat','senderRole']
+    .forEach(id=>{const el=document.getElementById(id);if(el)el.value=el.options?el.options[0].value:'';});
+  document.getElementById('los').value='';
+  document.getElementById('ask').value='';
+  document.getElementById('daysPend').value='';
+  ['fw','ft','fd','fc','fb','ff','fe','fi']
+    .forEach(id=>document.getElementById(id).checked=false);
+  document.getElementById('authFields').classList.add('hidden');
+  document.getElementById('placeholder').classList.remove('hidden');
+  document.getElementById('outSection').classList.add('hidden');
+}
+</script>
+</body>
+</html>
