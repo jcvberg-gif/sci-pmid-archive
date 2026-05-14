@@ -1,7 +1,427 @@
 {
   "version": 1,
-  "updated": "2026-05-07",
+  "updated": "2026-05-14",
   "entries": [
+    {
+      "pmid": "41853689",
+      "title": "Neurogenic Bowel and Bladder Prevalence: 88-91% in 1,056 Brazilian SCI Patients",
+      "journal": "Journal of Spinal Cord Medicine",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-14",
+      "times_seen": 2,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "draft",
+        "sent"
+      ],
+      "themes": [
+        "T04",
+        "T07"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "sci_digest",
+          "source_date": "2026-04-25",
+          "tier": "HIGH",
+          "status": "draft"
+        },
+        {
+          "date": "2026-05-11",
+          "source": "sci_digest",
+          "tier": "MEDIUM",
+          "status": "sent"
+        }
+      ],
+      "action_tags": [
+        "\ud83c\udfe5"
+      ]
+    },
+    {
+      "pmid": "41652436",
+      "title": "Walking rehabilitation in incomplete SCI: robotic exoskeleton-assisted training (RCT) \u2014 Fourier X2",
+      "journal": "BioMedical Engineering OnLine",
+      "year": 2026,
+      "doi": "10.1186/s12938-026-01532-7",
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-14",
+      "times_seen": 2,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "draft",
+        "sent"
+      ],
+      "themes": [
+        "T01",
+        "T09",
+        "T10",
+        "T04"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "sci_digest",
+          "source_date": "2026-04-25",
+          "tier": "HIGH",
+          "status": "draft"
+        },
+        {
+          "date": "2026-05-11",
+          "source": "sci_digest",
+          "tier": "HIGH",
+          "status": "sent"
+        }
+      ],
+      "action_tags": [
+        "\ud83c\udfe5"
+      ]
+    },
+    {
+      "pmid": "40927746",
+      "title": "Machine Learning Predicts Discharge FIM in SCI IRF: RF/XGBoost Outperform GLMs",
+      "journal": "Frontiers in Rehabilitation Sciences",
+      "year": 2025,
+      "doi": "10.3389/fresc.2025.1594753",
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-14",
+      "times_seen": 2,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "draft",
+        "sent"
+      ],
+      "themes": [
+        "T01",
+        "T08",
+        "T12"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "sci_digest",
+          "source_date": "2026-04-25",
+          "tier": "HIGH",
+          "status": "draft"
+        },
+        {
+          "date": "2026-05-11",
+          "source": "sci_digest",
+          "tier": "HIGH",
+          "status": "sent"
+        }
+      ],
+      "action_tags": [
+        "\ud83c\udfe5",
+        "\ud83e\udd47"
+      ]
+    },
+    {
+      "pmid": "41404984",
+      "title": "Earlier Initiation of Gait Training With Overground Robotic Exoskeleton After Incomplete SCI: Secondary Analysis of an RCT",
+      "journal": "Disability and Rehabilitation",
+      "year": 2025,
+      "doi": "10.1080/09638288.2025.2599840",
+      "first_seen": "2026-04-19",
+      "last_seen": "2026-05-14",
+      "times_seen": 3,
+      "sources": [
+        "sci_digest"
+      ],
+      "themes": [
+        "T02",
+        "T08",
+        "T04",
+        "T10"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-04-19",
+          "source": "sci_digest",
+          "tier": "MEDIUM"
+        },
+        {
+          "date": "2026-04-24",
+          "source": "sci_digest",
+          "tier": "MEDIUM"
+        },
+        {
+          "date": "2026-05-11",
+          "source": "sci_digest",
+          "tier": "MEDIUM",
+          "status": "sent"
+        }
+      ],
+      "action_tags": [
+        "\ud83d\udccb",
+        "\ud83c\udfe5"
+      ],
+      "source_status": [
+        "sent"
+      ]
+    },
+    {
+      "pmid": "40442684",
+      "title": "Comparative Efficacy of Robotic Exoskeleton and Conventional Gait Training in SCI: A Meta-Analysis of RCTs",
+      "journal": "Journal of NeuroEngineering and Rehabilitation",
+      "year": 2025,
+      "doi": "10.1186/s12984-025-01649-1",
+      "first_seen": "2026-04-19",
+      "last_seen": "2026-05-14",
+      "times_seen": 3,
+      "sources": [
+        "sci_digest"
+      ],
+      "themes": [
+        "T02",
+        "T04",
+        "T10"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-04-19",
+          "source": "sci_digest",
+          "tier": "MEDIUM"
+        },
+        {
+          "date": "2026-04-24",
+          "source": "sci_digest",
+          "tier": "MEDIUM"
+        },
+        {
+          "date": "2026-05-11",
+          "source": "sci_digest",
+          "tier": "HIGH",
+          "status": "sent"
+        }
+      ],
+      "action_tags": [
+        "\ud83d\udcda",
+        "\ud83c\udf93",
+        "\ud83e\udd48"
+      ],
+      "source_status": [
+        "sent"
+      ]
+    },
+    {
+      "pmid": "39893085",
+      "title": "ARC-EX / Up-LIFT Cardiovascular Safety Confirmed: tSCS Does NOT Destabilize BP or HR",
+      "journal": "Neurotherapeutics",
+      "year": 2025,
+      "doi": null,
+      "first_seen": "2026-05-14",
+      "last_seen": "2026-05-14",
+      "times_seen": 1,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "T11",
+        "T06"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-11",
+          "source": "sci_digest",
+          "tier": "HIGH",
+          "status": "sent"
+        }
+      ],
+      "action_tags": [
+        "\ud83e\udd49"
+      ]
+    },
+    {
+      "pmid": "40568376",
+      "title": "RESTORES Trial: Epidural SCS + Robotic Therapy Restores Ambulation in Chronic Complete SCI",
+      "journal": "Neurorehabilitation and Neural Repair",
+      "year": 2025,
+      "doi": null,
+      "first_seen": "2026-05-14",
+      "last_seen": "2026-05-14",
+      "times_seen": 1,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "T11",
+        "T04",
+        "T03"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-11",
+          "source": "sci_digest",
+          "tier": "HIGH",
+          "status": "sent"
+        }
+      ],
+      "action_tags": [
+        "\ud83c\udfe5"
+      ]
+    },
+    {
+      "pmid": "41594839",
+      "title": "High-Frequency SCS Reduces Spasticity Without Impairing Gait: Preliminary Case Series",
+      "journal": "Brain Sciences",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-14",
+      "last_seen": "2026-05-14",
+      "times_seen": 1,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "T05",
+        "T11"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-11",
+          "source": "sci_digest",
+          "tier": "MEDIUM",
+          "status": "sent"
+        }
+      ],
+      "action_tags": [
+        "\ud83c\udfe5"
+      ]
+    },
+    {
+      "pmid": "40778001",
+      "title": "Pressure Injury Prevention in SCI: AI Tools Emerging But Fundamentals Still Dominate",
+      "journal": "Journal of Surgery and Research",
+      "year": 2025,
+      "doi": null,
+      "first_seen": "2026-05-14",
+      "last_seen": "2026-05-14",
+      "times_seen": 1,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "T08"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-11",
+          "source": "sci_digest",
+          "tier": "MEDIUM",
+          "status": "sent"
+        }
+      ],
+      "action_tags": [
+        "\ud83c\udfe5"
+      ]
+    },
+    {
+      "pmid": "36812645",
+      "title": "Performance of ChatGPT on USMLE (LLMs for Medical Education)",
+      "journal": "PLOS Digital Health",
+      "year": 2023,
+      "doi": null,
+      "first_seen": "2026-05-14",
+      "last_seen": "2026-05-14",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A11",
+        "A02"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-05",
+          "source": "ai_health_digest",
+          "tier": "WATCH",
+          "status": "sent"
+        }
+      ],
+      "action_tags": [
+        "\ud83c\udf93"
+      ]
+    },
+    {
+      "pmid": "28893811",
+      "title": "Tethered to the EHR: After-Hours Burden in Rehabilitation Medicine",
+      "journal": "Annals of Family Medicine",
+      "year": 2017,
+      "doi": null,
+      "first_seen": "2026-05-14",
+      "last_seen": "2026-05-14",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A04"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-05",
+          "source": "ai_health_digest",
+          "tier": "SKIM",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "37791117",
+      "title": "Multimodal LLMs for Radiology: IRF Spine Imaging Implications",
+      "journal": "Proceedings IEEE CVPR",
+      "year": 2023,
+      "doi": null,
+      "first_seen": "2026-05-14",
+      "last_seen": "2026-05-14",
+      "times_seen": 1,
+      "sources": [
+        "ai_health_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "A02"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-05",
+          "source": "ai_health_digest",
+          "tier": "SKIM",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
     {
       "pmid": "41862205",
       "title": "Repurposing Dexmedetomidine: Pharmacological Hypothermia and Dual Locomotor/Bladder Recovery after SCI",
@@ -20,35 +440,6 @@
       "themes": [
         "T02",
         "T11"
-      ],
-      "tier_history": [
-        {
-          "date": "2026-05-07",
-          "source": "sci_digest",
-          "source_date": "2026-04-25",
-          "tier": "HIGH",
-          "status": "draft"
-        }
-      ],
-      "action_tags": []
-    },
-    {
-      "pmid": "41853689",
-      "title": "Neurogenic Bowel and Bladder Prevalence: 88-91% in 1,056 Brazilian SCI Patients",
-      "journal": "Journal of Spinal Cord Medicine",
-      "year": 2026,
-      "doi": null,
-      "first_seen": "2026-05-07",
-      "last_seen": "2026-05-07",
-      "times_seen": 1,
-      "sources": [
-        "sci_digest"
-      ],
-      "source_status": [
-        "draft"
-      ],
-      "themes": [
-        "T04"
       ],
       "tier_history": [
         {
@@ -116,37 +507,6 @@
           "source_date": "2026-04-27",
           "tier": "Top-3",
           "status": "sent"
-        }
-      ],
-      "action_tags": []
-    },
-    {
-      "pmid": "41652436",
-      "title": "Walking rehabilitation in incomplete SCI: robotic exoskeleton-assisted training (RCT) \u2014 Fourier X2",
-      "journal": "BioMedical Engineering OnLine",
-      "year": 2026,
-      "doi": "10.1186/s12938-026-01532-7",
-      "first_seen": "2026-05-07",
-      "last_seen": "2026-05-07",
-      "times_seen": 1,
-      "sources": [
-        "sci_digest"
-      ],
-      "source_status": [
-        "draft"
-      ],
-      "themes": [
-        "T01",
-        "T09",
-        "T10"
-      ],
-      "tier_history": [
-        {
-          "date": "2026-05-07",
-          "source": "sci_digest",
-          "source_date": "2026-04-25",
-          "tier": "HIGH",
-          "status": "draft"
         }
       ],
       "action_tags": []
@@ -350,36 +710,6 @@
           "source": "ai_health_digest",
           "source_date": "2026-04-25",
           "tier": "SKIM",
-          "status": "draft"
-        }
-      ],
-      "action_tags": []
-    },
-    {
-      "pmid": "40927746",
-      "title": "Machine Learning Predicts Discharge FIM in SCI IRF: RF/XGBoost Outperform GLMs",
-      "journal": "Frontiers in Rehabilitation Sciences",
-      "year": 2025,
-      "doi": "10.3389/fresc.2025.1594753",
-      "first_seen": "2026-05-07",
-      "last_seen": "2026-05-07",
-      "times_seen": 1,
-      "sources": [
-        "sci_digest"
-      ],
-      "source_status": [
-        "draft"
-      ],
-      "themes": [
-        "T01",
-        "T08"
-      ],
-      "tier_history": [
-        {
-          "date": "2026-05-07",
-          "source": "sci_digest",
-          "source_date": "2026-04-25",
-          "tier": "HIGH",
           "status": "draft"
         }
       ],
@@ -1191,40 +1521,6 @@
       "source_status": []
     },
     {
-      "pmid": "41404984",
-      "title": "Earlier Initiation of Gait Training With Overground Robotic Exoskeleton After Incomplete SCI: Secondary Analysis of an RCT",
-      "journal": "Disability and Rehabilitation",
-      "year": 2025,
-      "doi": "10.1080/09638288.2025.2599840",
-      "first_seen": "2026-04-19",
-      "last_seen": "2026-04-24",
-      "times_seen": 2,
-      "sources": [
-        "sci_digest"
-      ],
-      "themes": [
-        "T02",
-        "T08"
-      ],
-      "tier_history": [
-        {
-          "date": "2026-04-19",
-          "source": "sci_digest",
-          "tier": "MEDIUM"
-        },
-        {
-          "date": "2026-04-24",
-          "source": "sci_digest",
-          "tier": "MEDIUM"
-        }
-      ],
-      "action_tags": [
-        "\ud83d\udccb",
-        "\ud83c\udfe5"
-      ],
-      "source_status": []
-    },
-    {
       "pmid": "41252289",
       "title": "Efficacy of Repetitive Transcranial Magnetic Stimulation on Lower Extremity Motor Function in Spinal Cord Injury: A Meta-Analysis of RCTs",
       "journal": "Neurorehabilitation",
@@ -1256,39 +1552,6 @@
         "\ud83d\udcdd",
         "\ud83c\udf93",
         "\ud83d\udd2c"
-      ],
-      "source_status": []
-    },
-    {
-      "pmid": "40442684",
-      "title": "Comparative Efficacy of Robotic Exoskeleton and Conventional Gait Training in SCI: A Meta-Analysis of RCTs",
-      "journal": "Journal of NeuroEngineering and Rehabilitation",
-      "year": 2025,
-      "doi": "10.1186/s12984-025-01649-1",
-      "first_seen": "2026-04-19",
-      "last_seen": "2026-04-24",
-      "times_seen": 2,
-      "sources": [
-        "sci_digest"
-      ],
-      "themes": [
-        "T02"
-      ],
-      "tier_history": [
-        {
-          "date": "2026-04-19",
-          "source": "sci_digest",
-          "tier": "MEDIUM"
-        },
-        {
-          "date": "2026-04-24",
-          "source": "sci_digest",
-          "tier": "MEDIUM"
-        }
-      ],
-      "action_tags": [
-        "\ud83d\udcda",
-        "\ud83c\udf93"
       ],
       "source_status": []
     },
