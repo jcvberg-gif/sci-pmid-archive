@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARC-EX Candidacy Screener — MFB Rehab</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #003366;
+      --navy-dark: #002244;
+      --navy-light: #e6edf5;
+      --gold: #C8882A;
+      --gold-light: #f8edd8;
+      --red: #b91c1c;
+      --green: #166534;
+      --green-bg: #dcfce7;
+      --amber: #92400e;
+      --amber-bg: #fef3c7;
+      --red-bg: #fee2e2;
+      --white: #ffffff;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-400: #9ca3af;
+      --gray-600: #4b5563;
+      --gray-800: #1f2937;
+      --font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      --radius: 8px;
+    }
+    body {
+      font-family: var(--font);
+      background: var(--gray-100);
+      color: var(--gray-800);
+      font-size: 15px;
+      line-height: 1.55;
+      min-height: 100vh;
+    }
+    /* PHI Banner */
+    .phi-banner {
+      background: var(--red);
+      color: var(--white);
+      text-align: center;
+      padding: 9px 16px;
+      font-weight: 700;
+      font-size: 12.5px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    }
+    /* Header */
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 22px 24px 18px;
+    }
+    .header-inner { max-width: 780px; margin: 0 auto; }
+    header .org {
+      font-size: 10.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    header h1 { font-size: 23px; font-weight: 800; margin-bottom: 3px; }
+    header .subtitle { font-size: 13px; opacity: 0.78; margin-bottom: 10px; }
+    .badge-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+    }
+    .badge.outline {
+      background: transparent;
+      border: 1.5px solid rgba(200,136,42,0.6);
+      color: var(--gold);
+    }
+    /* Main layout */
+    main { max-width: 780px; margin: 0 auto; padding: 22px 16px 48px; }
+    /* Cards */
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid var(--gray-200);
+      margin-bottom: 20px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .card-header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 11px 18px;
+      font-weight: 700;
+      font-size: 13.5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card-header.excl { background: #7f1d1d; }
+    .step-num {
+      background: var(--gold);
+      color: var(--navy);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .step-num.excl { background: #fca5a5; color: #7f1d1d; }
+    .card-body { padding: 16px 18px; }
+    /* Info note */
+    .info-note {
+      font-size: 12px;
+      color: var(--gray-600);
+      background: var(--gold-light);
+      border-left: 3px solid var(--gold);
+      padding: 8px 12px;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 14px;
+    }
+    .info-note.danger {
+      background: var(--red-bg);
+      border-color: var(--red);
+      color: var(--red);
+      font-weight: 600;
+    }
+    /* Form grid */
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 4px;
+    }
+    @media (max-width: 540px) { .form-grid { grid-template-columns: 1fr; } }
+    .form-group { margin-bottom: 14px; }
+    .form-group:last-child { margin-bottom: 0; }
+    .field-label {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 5px;
+      letter-spacing: 0.01em;
+    }
+    select {
+      width: 100%;
+      padding: 9px 11px;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 6px;
+      font-size: 13.5px;
+      font-family: var(--font);
+      background: var(--white);
+      color: var(--gray-800);
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239ca3af' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      padding-right: 30px;
+      cursor: pointer;
+      transition: border-color 0.15s;
+    }
+    select:focus { outline: 2px solid var(--gold); outline-offset: 1px; border-color: var(--gold); }
+    /* Checkbox items */
+    .check-group { display: flex; flex-direction: column; gap: 7px; }
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      padding: 9px 13px;
+      border-radius: 7px;
+      background: var(--gray-50);
+      border: 1.5px solid transparent;
+      transition: all 0.12s;
+    }
+    .check-item:hover { border-color: var(--gold); background: var(--gold-light); }
+    .check-item input[type="checkbox"] {
+      width: 17px;
+      height: 17px;
+      margin-top: 2px;
+      accent-color: var(--navy);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .check-item input.excl { accent-color: var(--red); }
+    .check-label { font-size: 13.5px; color: var(--gray-800); cursor: pointer; flex: 1; }
+    .check-label .sub {
+      display: block;
+      font-size: 11.5px;
+      color: var(--gray-400);
+      margin-top: 2px;
+      line-height: 1.4;
+    }
+    /* Results */
+    .results-card { display: none; }
+    .results-card.visible { display: block; }
+    .verdict {
+      padding: 16px 18px;
+      border-radius: 8px;
+      border-left: 5px solid;
+      margin-bottom: 16px;
+    }
+    .verdict.yes { background: var(--green-bg); border-color: #16a34a; }
+    .verdict.no { background: var(--red-bg); border-color: var(--red); }
+    .verdict.conditional { background: var(--amber-bg); border-color: #d97706; }
+    .verdict-label { font-size: 17px; font-weight: 800; margin-bottom: 6px; }
+    .verdict.yes .verdict-label { color: var(--green); }
+    .verdict.no .verdict-label { color: var(--red); }
+    .verdict.conditional .verdict-label { color: var(--amber); }
+    .verdict ul { padding-left: 18px; font-size: 13px; margin-top: 6px; }
+    .verdict ul li { margin-bottom: 3px; }
+    .verdict p { font-size: 13px; font-weight: 600; margin-top: 8px; }
+    .next-steps {
+      background: var(--navy-light);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+    }
+    .next-steps h3 {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 9px;
+    }
+    .next-steps ol { padding-left: 18px; font-size: 13px; }
+    .next-steps ol li { margin-bottom: 4px; }
+    /* SmartPhrase */
+    .sp-label {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 8px;
+    }
+    .sp-box {
+      background: #f8f9fa;
+      border: 1px solid var(--gray-200);
+      border-radius: 6px;
+      padding: 13px 15px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 11.5px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      max-height: 240px;
+      overflow-y: auto;
+      color: #1e293b;
+      margin-bottom: 14px;
+      line-height: 1.6;
+    }
+    /* Buttons */
+    .btn-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .btn {
+      padding: 10px 20px;
+      border-radius: 7px;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      font-family: var(--font);
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .btn-gold { background: var(--gold); color: var(--navy); }
+    .btn-gold:hover { background: #a66c1a; color: var(--white); }
+    .btn-outline { background: transparent; color: var(--navy); border: 2px solid var(--navy); }
+    .btn-outline:hover { background: var(--navy-light); }
+    .btn-primary { background: var(--navy); color: var(--white); }
+    .btn-primary:hover { background: var(--navy-dark); }
+    .copied-toast {
+      font-size: 12px;
+      color: var(--green);
+      font-weight: 700;
+      display: none;
+    }
+    /* Assess button area */
+    .assess-zone {
+      display: flex;
+      justify-content: center;
+      padding: 4px 0 8px;
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 11px;
+      color: var(--gray-400);
+      padding: 8px 16px 24px;
+      max-width: 780px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    /* Print */
+    @media print {
+      .phi-banner { position: static; font-size: 10px; }
+      .assess-zone, .btn-row { display: none !important; }
+      body { background: white; font-size: 12px; }
+      header { background: #003366 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .card { box-shadow: none; border: 1px solid #ccc; page-break-inside: avoid; }
+      .results-card { display: block !important; }
+      .sp-box { max-height: none; font-size: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="phi-banner">&#9888; DO NOT ENTER PATIENT-IDENTIFYING INFORMATION (PHI) &mdash; CLINICAL CRITERIA ONLY</div>
+
+<header>
+  <div class="header-inner">
+    <div class="org">Mary Free Bed Rehabilitation Hospital</div>
+    <h1>ARC-EX Candidacy Screener</h1>
+    <p class="subtitle">Transcutaneous Spinal Cord Stimulation &mdash; Upper Extremity Recovery Program</p>
+    <div class="badge-row">
+      <span class="badge">tSCS</span>
+      <span class="badge outline">Cervical SCI</span>
+      <span class="badge outline">Upper Extremity</span>
+      <span class="badge outline">Week 21 &middot; 2026</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ── SECTION 1: Clinical Profile ── -->
+  <div class="card">
+    <div class="card-header">
+      <div class="step-num">1</div>
+      Clinical Profile
+    </div>
+    <div class="card-body">
+      <div class="info-note">Enter clinical characteristics only &mdash; no names, MRNs, birthdates, or other identifiers.</div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label class="field-label" for="sci-level">Injury Level</label>
+          <select id="sci-level">
+            <option value="">&#8212; Select &#8212;</option>
+            <option value="c1c4">C1&ndash;C4 (High Cervical)</option>
+            <option value="c5c6">C5&ndash;C6 (Mid Cervical)</option>
+            <option value="c7c8">C7&ndash;C8 (Low Cervical)</option>
+            <option value="thoracic">T1 and Below (Thoracic+)</option>
+            <option value="pending">Unknown / Pending Classification</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="field-label" for="ais">AIS Classification</label>
+          <select id="ais">
+            <option value="">&#8212; Select &#8212;</option>
+            <option value="A">AIS A &mdash; Motor &amp; Sensory Complete</option>
+            <option value="B">AIS B &mdash; Sensory Incomplete</option>
+            <option value="C">AIS C &mdash; Motor Incomplete (&lt;&nbsp;half key muscles)</option>
+            <option value="D">AIS D &mdash; Motor Incomplete (&ge;&nbsp;half key muscles)</option>
+            <option value="E">AIS E &mdash; Neurologically Normal</option>
+            <option value="pending">Not Yet Classified</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="field-label" for="time-inj">Time Since Injury</label>
+          <select id="time-inj">
+            <option value="">&#8212; Select &#8212;</option>
+            <option value="acute">&#60;&nbsp;1 month (Acute)</option>
+            <option value="subacute">1&ndash;6 months (Subacute)</option>
+            <option value="early-chronic">6&ndash;12 months</option>
+            <option value="chronic">&#62;&nbsp;12 months (Chronic)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="field-label" for="age-cat">Age Category</label>
+          <select id="age-cat">
+            <option value="">&#8212; Select &#8212;</option>
+            <option value="minor">Under 18 (Pediatric)</option>
+            <option value="adult">18&ndash;64</option>
+            <option value="older">65 and Older</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="field-label" for="uems">Upper Extremity Motor Score (UEMS)</label>
+          <select id="uems">
+            <option value="">&#8212; Select &#8212;</option>
+            <option value="0-10">0&ndash;10 (Minimal / No voluntary movement)</option>
+            <option value="11-25">11&ndash;25 (Moderate impairment)</option>
+            <option value="26-40">26&ndash;40 (Mild-moderate impairment)</option>
+            <option value="41-50">41&ndash;50 (Near-normal)</option>
+            <option value="unknown">Not yet assessed</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="field-label" for="setting">Current Care Setting</label>
+          <select id="setting">
+            <option value="">&#8212; Select &#8212;</option>
+            <option value="acute">Acute Hospital</option>
+            <option value="irf">Inpatient Rehab (MFB)</option>
+            <option value="outpt">Outpatient Clinic</option>
+            <option value="ltach">LTACH / SNF</option>
+            <option value="community">Community / Home</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SECTION 2: Inclusion Criteria ── -->
+  <div class="card">
+    <div class="card-header">
+      <div class="step-num">2</div>
+      Inclusion Criteria &mdash; Check All That Apply
+    </div>
+    <div class="card-body">
+      <div class="info-note">All core criteria (&#9733;) should be confirmed. Additional criteria inform candidacy strength.</div>
+      <div class="check-group">
+        <div class="check-item">
+          <input type="checkbox" id="i-cervical" name="incl" value="cervical-dx" />
+          <label class="check-label" for="i-cervical">
+            &#9733; Confirmed cervical SCI (C1&ndash;C8)
+            <span class="sub">MRI / ISNCSCI exam documents cervical-level motor/sensory involvement</span>
+          </label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="i-age" name="incl" value="age18" />
+          <label class="check-label" for="i-age">
+            &#9733; Age &ge; 18 years
+            <span class="sub">Pediatric tSCS protocols are not yet established for ARC-EX program</span>
+          </label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="i-time" name="incl" value="time6mo" />
+          <label class="check-label" for="i-time">
+            &#9733; &ge; 6 months post-injury
+            <span class="sub">Neurological plateau allows meaningful response attribution</span>
+          </label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="i-stable" name="incl" value="medstable" />
+          <label class="check-label" for="i-stable">
+            &#9733; Medically stable &mdash; no acute illness requiring hospital-level care
+            <span class="sub">No unresolved sepsis, acute DVT/PE, hemodynamic instability, or recent surgery</span>
+          </label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="i-consent" name="incl" value="consent" />
+          <label class="check-label" for="i-consent">
+            &#9733; Able to provide informed consent or LAR identified
+            <span class="sub">Adequate cognitive capacity for decision-making; legal rep documented if needed</span>
+          </label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="i-therapy" name="incl" value="therapytol" />
+          <label class="check-label" for="i-therapy">
+            Tolerates &ge; 60-minute therapy sessions
+            <span class="sub">Sitting tolerance and fatigue/pain levels allow intensive daily participation</span>
+          </label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="i-motivated" name="incl" value="motivated" />
+          <label class="check-label" for="i-motivated">
+            Patient/family motivated; realistic expectations established
+            <span class="sub">Understand time commitment, potential outcomes, and home program requirements</span>
+          </label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="i-skin" name="incl" value="skinintact" />
+          <label class="check-label" for="i-skin">
+            Skin intact at planned electrode sites (posterior cervical/thoracic spine &amp; dorsal hands)
+            <span class="sub">No wounds, rashes, staples, or implanted hardware at target placement locations</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SECTION 3: Exclusion Criteria ── -->
+  <div class="card">
+    <div class="card-header excl">
+      <div class="step-num excl">3</div>
+      Exclusion Criteria &mdash; Check Any That Are Present
+    </div>
+    <div class="card-body">
+      <div class="info-note danger">Any absolute exclusion = NOT a candidate. Relative exclusions require team review.</div>
+      <div class="check-group">
+        <div class="check-item">
+          <input type="checkbox" id="e-implant" name="excl" value="implant" class="excl" />
+          <label class="check-label" for="e-implant">
+            [ABSOLUTE] Active implanted electronic device
+            <span class="sub">Pacemaker, ICD, spinal cord stimulator (SCS), DBS, cochlear implant, or similar</span>
+          </label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="e-seizure" name="excl" value="seizure" class="excl" />
+          <label class="check-label" for="e-seizure">
+            [ABSOLUTE] History of seizures or epilepsy
+            <span class="sub">Electrical stimulation may lower seizure threshold; cardiology/neurology clearance needed first</span>
+          </label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="e-preg" name="excl" value="pregnancy" class="excl" />
+          <label class="check-label" for="e-preg">
+            [ABSOLUTE] Current pregnancy or actively planning pregnancy
+            <span class="sub">tSCS safety in pregnancy not established; defer until post-partum</span>
+          </label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="e-cancer" name="excl" value="cancer" class="excl" />
+          <label class="check-label" for="e-cancer">
+            [ABSOLUTE] Active malignancy within stimulation region (cervical/thoracic spine)
+            <span class="sub">Spinal metastases or primary spinal cord tumors in electrode zone</span>
+          </label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="e-prog" name="excl" value="progressive" class="excl" />
+          <label class="check-label" for="e-prog">
+            [ABSOLUTE] Primary progressive neurological disease (MS progressive, ALS, tumor)
+            <span class="sub">Underlying cause is progressive; stable traumatic or non-progressive SCI required</span>
+          </label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="e-ad" name="excl" value="uncontrolled-ad" class="excl" />
+          <label class="check-label" for="e-ad">
+            [RELATIVE] Uncontrolled autonomic dysreflexia
+            <span class="sub">Frequent AD episodes without adequate trigger management or BP control plan</span>
+          </label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="e-spast" name="excl" value="spasticity" class="excl" />
+          <label class="check-label" for="e-spast">
+            [RELATIVE] Severe uncontrolled spasticity limiting engagement (MAS &ge; 4 at multiple joints)
+            <span class="sub">Needs optimization (baclofen, botulinum toxin, etc.) prior to program start</span>
+          </label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="e-subst" name="excl" value="substance" class="excl" />
+          <label class="check-label" for="e-subst">
+            [RELATIVE] Active unmanaged alcohol or substance use disorder
+            <span class="sub">Would significantly compromise safety, adherence, and program integrity</span>
+          </label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="e-metal" name="excl" value="metal" class="excl" />
+          <label class="check-label" for="e-metal">
+            [RELATIVE] Metal implants at stimulation sites (surgical hardware at C-spine/posterior neck)
+            <span class="sub">Requires case-by-case review with ARC-EX program team; may still be eligible</span>
+          </label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="e-wound" name="excl" value="wound" class="excl" />
+          <label class="check-label" for="e-wound">
+            [RELATIVE] Active wound, infection, or skin breakdown at electrode sites
+            <span class="sub">Defer until resolved; skin integrity is required at posterior neck, thorax, and dorsal hands</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SECTION 4: Contextual Factors ── -->
+  <div class="card">
+    <div class="card-header">
+      <div class="step-num">4</div>
+      Contextual &amp; Support Factors
+    </div>
+    <div class="card-body">
+      <div class="form-grid">
+        <div class="form-group">
+          <label class="field-label" for="caregiver">Caregiver / Home Support</label>
+          <select id="caregiver">
+            <option value="">&#8212; Select &#8212;</option>
+            <option value="strong">Strong &mdash; dedicated trained caregiver available</option>
+            <option value="moderate">Moderate &mdash; some support, may need coaching</option>
+            <option value="limited">Limited &mdash; lives alone / minimal support</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="field-label" for="transport">Transportation Access</label>
+          <select id="transport">
+            <option value="">&#8212; Select &#8212;</option>
+            <option value="reliable">Reliable &mdash; can attend 5&times;/week outpatient</option>
+            <option value="variable">Variable &mdash; may occasionally miss sessions</option>
+            <option value="barrier">Significant barrier &mdash; inpatient or telehealth needed</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="field-label" for="goal">Primary Functional Goal</label>
+          <select id="goal">
+            <option value="">&#8212; Select &#8212;</option>
+            <option value="grasp">Improve hand grasp / pinch / release</option>
+            <option value="reach">Improve reach and proximal arm function</option>
+            <option value="adl">Greater independence with ADLs</option>
+            <option value="pain">Upper extremity pain management</option>
+            <option value="comprehensive">Multiple goals / comprehensive program</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="field-label" for="prior-stim">Prior Electrical Stimulation Experience</label>
+          <select id="prior-stim">
+            <option value="">&#8212; Select &#8212;</option>
+            <option value="none">No prior e-stim therapy</option>
+            <option value="nmes">NMES / FES previously used &mdash; tolerated well</option>
+            <option value="tscs">Prior tSCS (different protocol)</option>
+            <option value="intolerant">Previously intolerant to electrical stimulation</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="assess-zone">
+    <button class="btn btn-primary" onclick="runAssessment()"
+      style="min-width:210px;font-size:15px;padding:13px 30px;letter-spacing:0.02em;">
+      &#9654;&nbsp; Assess Candidacy
+    </button>
+  </div>
+
+  <!-- ── RESULTS ── -->
+  <div class="card results-card" id="results-card" style="margin-top:22px;">
+    <div class="card-header">
+      <div class="step-num">&#10003;</div>
+      Candidacy Assessment Result
+    </div>
+    <div class="card-body">
+      <div id="verdict-box"></div>
+      <div id="next-steps-box"></div>
+      <div class="sp-label">Epic SmartPhrase Output</div>
+      <div class="sp-box" id="sp-output"></div>
+      <div class="btn-row">
+        <button class="btn btn-gold" onclick="copySmartPhrase()">&#128203; Copy as Epic SmartPhrase</button>
+        <span class="copied-toast" id="copy-toast">&#10003; Copied to clipboard</span>
+        <button class="btn btn-outline" onclick="resetAll()" style="margin-left:auto;">&#8635; Reset</button>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  ARC-EX Candidacy Screener &middot; Mary Free Bed Rehabilitation Hospital &middot; Tool v1.0 &middot; Week 21 &middot; 2026-05-20<br />
+  Not a substitute for physician clinical judgment. Criteria based on ARC-EX program requirements; confirm current protocol with program coordinator.<br />
+  <strong>No PHI is stored, transmitted, or logged. All inputs cleared on Reset or page close.</strong>
+</footer>
+
+<script>
+  var EXCL_LABELS = {
+    implant:        'Active implanted electronic device (pacemaker / ICD / SCS / DBS)',
+    seizure:        'History of seizures or epilepsy',
+    pregnancy:      'Current or planned pregnancy',
+    cancer:         'Active malignancy in stimulation region',
+    progressive:    'Primary progressive neurological disease',
+    'uncontrolled-ad': 'Uncontrolled autonomic dysreflexia',
+    spasticity:     'Severe uncontrolled spasticity (MAS ≥ 4)',
+    substance:      'Active unmanaged substance use disorder',
+    metal:          'Metal implants at stimulation sites (relative)',
+    wound:          'Active wound / infection at electrode sites (relative)'
+  };
+
+  var INCL_LABELS = {
+    'cervical-dx':  'Confirmed cervical SCI (C1–C8)',
+    age18:          'Age ≥ 18 years',
+    time6mo:        '≥ 6 months post-injury',
+    medstable:      'Medically stable',
+    consent:        'Informed consent / LAR identified',
+    therapytol:     'Tolerates ≥ 60-min therapy sessions',
+    motivated:      'Motivated; realistic expectations',
+    skinintact:     'Skin intact at electrode sites'
+  };
+
+  var HARD_EXCL = ['implant','seizure','pregnancy','cancer','progressive'];
+  var SOFT_EXCL = ['uncontrolled-ad','spasticity','substance','metal','wound'];
+  var CORE_INCL = ['cervical-dx','age18','medstable','consent'];
+
+  function getChecked(name) {
+    return Array.from(document.querySelectorAll('input[name="'+name+'"]:checked')).map(function(c){return c.value;});
+  }
+
+  function runAssessment() {
+    var level    = document.getElementById('sci-level').value;
+    var ais      = document.getElementById('ais').value;
+    var timeInj  = document.getElementById('time-inj').value;
+    var ageCat   = document.getElementById('age-cat').value;
+    var uems     = document.getElementById('uems').value;
+    var setting  = document.getElementById('setting').value;
+    var caregiver= document.getElementById('caregiver').value;
+    var transport= document.getElementById('transport').value;
+    var goal     = document.getElementById('goal').value;
+    var priorStim= document.getElementById('prior-stim').value;
+
+    var inclChecked = getChecked('incl');
+    var exclChecked = getChecked('excl');
+
+    var verdict   = 'yes';
+    var barriers  = [];
+    var flags     = [];
+    var nextSteps = [];
+
+    // Hard exclusions
+    var hardPresent = exclChecked.filter(function(e){return HARD_EXCL.indexOf(e)>=0;});
+    if (hardPresent.length > 0) {
+      verdict = 'no';
+      hardPresent.forEach(function(e){ barriers.push(EXCL_LABELS[e]); });
+    }
+
+    // Level check
+    if (level === 'thoracic') {
+      verdict = 'no';
+      barriers.push('Injury level T1+ — upper extremity tSCS not indicated for thoracic SCI');
+    }
+    if (level === 'pending') {
+      if (verdict === 'yes') verdict = 'conditional';
+      flags.push('Injury level not yet confirmed — defer until ISNCSCI classification complete');
+    }
+
+    // Age
+    if (ageCat === 'minor') {
+      verdict = 'no';
+      barriers.push('Age < 18 — pediatric ARC-EX protocol not established');
+    }
+
+    // Time since injury
+    if (timeInj === 'acute') {
+      verdict = 'no';
+      barriers.push('< 1 month post-injury — too early; spontaneous neurological recovery ongoing');
+    } else if (timeInj === 'subacute') {
+      if (verdict === 'yes') verdict = 'conditional';
+      flags.push('1–6 months post-injury — subacute eligibility requires program team review and protocol-specific approval');
+    }
+
+    // Missing core inclusions
+    var missingCore = CORE_INCL.filter(function(i){return inclChecked.indexOf(i)<0;});
+    if (missingCore.length > 0 && verdict !== 'no') {
+      verdict = 'no';
+      missingCore.forEach(function(i){barriers.push('Unmet core criterion: ' + INCL_LABELS[i]);});
+    }
+
+    // 6-month flag
+    if (inclChecked.indexOf('time6mo') < 0 && timeInj !== 'acute' && timeInj !== 'subacute' && verdict === 'yes') {
+      verdict = 'conditional';
+      flags.push('Confirm ≥ 6 months post-injury before enrollment');
+    }
+
+    // Soft exclusions
+    var softPresent = exclChecked.filter(function(e){return SOFT_EXCL.indexOf(e)>=0;});
+    if (softPresent.length > 0 && verdict === 'yes') {
+      verdict = 'conditional';
+      softPresent.forEach(function(e){flags.push(EXCL_LABELS[e] + ' — requires team review / optimization before enrollment');});
+    } else if (softPresent.length > 0 && verdict === 'conditional') {
+      softPresent.forEach(function(e){flags.push(EXCL_LABELS[e] + ' — requires team review / optimization');});
+    }
+
+    // Contextual flags
+    if (priorStim === 'intolerant') {
+      if (verdict === 'yes') verdict = 'conditional';
+      flags.push('Prior e-stim intolerance — recommend sensory threshold testing and desensitization protocol before commitment');
+    }
+    if (caregiver === 'limited') {
+      if (verdict === 'yes') verdict = 'conditional';
+      flags.push('Limited caregiver support — home program adherence risk; social work consultation recommended');
+    }
+    if (transport === 'barrier') {
+      if (verdict === 'yes') verdict = 'conditional';
+      flags.push('Transportation barrier — explore inpatient program track or telehealth-supplemented model');
+    }
+
+    // Build next steps
+    if (verdict === 'yes') {
+      nextSteps = [
+        'Refer to MFB ARC-EX program coordinator for formal enrollment screening',
+        'Schedule baseline ISNCSCI and GRASSP (Graded Redefined Assessment of Strength, Sensibility and Prehension)',
+        'Obtain signed informed consent and baseline upper extremity functional measures',
+        'Initiate pre-program OT evaluation to establish UE goal framework',
+        'Coordinate multidisciplinary team: physiatry, OT, PT, nursing, social work, case management'
+      ];
+    } else if (verdict === 'conditional') {
+      nextSteps = [
+        'Discuss borderline criteria with MFB ARC-EX program team prior to formal referral',
+        'Address modifiable barriers (spasticity management, wound care, social support, substance tx)',
+        'Re-screen in 4–8 weeks if barriers are temporary or actively being managed',
+        'Document clinical reasoning for conditional determination in physiatry note',
+        'Consider neurology or cardiology consultation for specific flagged concerns'
+      ];
+    } else {
+      nextSteps = [
+        'Document reason for non-candidacy in clinical note with specific criteria cited',
+        'Discuss alternative UE interventions: task-specific training, NMES/FES, splinting, constraint-induced therapy',
+        'Reassess when disqualifying criteria resolve (e.g., wound healed, seizure-free > 12 months)',
+        'Consult SCI specialty service for alternative neuromodulation options if applicable',
+        'Engage patient/family in realistic goal-setting for current functional trajectory'
+      ];
+    }
+
+    // Render verdict
+    var verdictLabel = verdict === 'yes'
+      ? '✓ MEETS CRITERIA — Refer to ARC-EX Program'
+      : verdict === 'conditional'
+        ? '⚠ CONDITIONAL — Further Review Required'
+        : '✗ DOES NOT MEET CRITERIA — Not Indicated at This Time';
+
+    var barrierHTML = barriers.length
+      ? '<p>Disqualifying criteria:</p><ul>' + barriers.map(function(b){return '<li>'+b+'</li>';}).join('') + '</ul>'
+      : '';
+    var flagHTML = flags.length
+      ? '<p>Review flags:</p><ul>' + flags.map(function(f){return '<li>'+f+'</li>';}).join('') + '</ul>'
+      : '';
+
+    document.getElementById('verdict-box').innerHTML =
+      '<div class="verdict '+verdict+'">' +
+        '<div class="verdict-label">'+verdictLabel+'</div>' +
+        barrierHTML + flagHTML +
+      '</div>';
+
+    document.getElementById('next-steps-box').innerHTML =
+      '<div class="next-steps"><h3>Recommended Next Steps</h3><ol>' +
+      nextSteps.map(function(s){return '<li>'+s+'</li>';}).join('') +
+      '</ol></div>';
+
+    // Build SmartPhrase
+    var now = new Date();
+    var ds = now.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+    var metIncl = inclChecked.map(function(i){return INCL_LABELS[i]||i;}).join('; ') || 'None documented';
+    var presentExcl = exclChecked.map(function(e){return EXCL_LABELS[e]||e;}).join('; ') || 'None identified';
+
+    var sp = [
+      'ARC-EX CANDIDACY SCREENING — ' + ds,
+      '='.repeat(46),
+      'INJURY PROFILE:',
+      '  Level: ' + (level||'Not specified') + '  |  AIS: ' + (ais||'Not specified'),
+      '  Time post-injury: ' + (timeInj||'Not specified') + '  |  Age category: ' + (ageCat||'Not specified'),
+      '  UEMS bracket: ' + (uems||'Not assessed') + '  |  Setting: ' + (setting||'Not specified'),
+      '',
+      'INCLUSION CRITERIA MET: ' + metIncl,
+      'EXCLUSION CRITERIA PRESENT: ' + presentExcl,
+    ];
+
+    if (flags.length) sp.push('REVIEW FLAGS: ' + flags.join(' · '));
+    sp.push('');
+    sp.push('CANDIDACY DETERMINATION: ' + verdictLabel);
+    sp.push('');
+    sp.push('RECOMMENDED NEXT STEPS:');
+    nextSteps.forEach(function(s,i){sp.push('  '+(i+1)+'. '+s);});
+    sp.push('');
+    sp.push('Primary goal: '+(goal||'Not specified')+'  |  Caregiver support: '+(caregiver||'Not specified'));
+    sp.push('Transport: '+(transport||'Not specified')+'  |  Prior e-stim: '+(priorStim||'Not specified'));
+    sp.push('');
+    sp.push('Screened via MFB ARC-EX Candidacy Tool v1.0 · Wk21·2026');
+    sp.push('Clinician review and chart documentation required. Not a substitute for clinical judgment.');
+
+    document.getElementById('sp-output').textContent = sp.join('\n');
+
+    var rc = document.getElementById('results-card');
+    rc.classList.add('visible');
+    rc.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+
+  function copySmartPhrase() {
+    var text = document.getElementById('sp-output').textContent;
+    if (!text) return;
+    var toast = document.getElementById('copy-toast');
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function(){
+        toast.style.display = 'inline';
+        setTimeout(function(){ toast.style.display = 'none'; }, 2800);
+      });
+    } else {
+      var el = document.getElementById('sp-output');
+      var range = document.createRange();
+      range.selectNode(el);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      try { document.execCommand('copy'); } catch(e){}
+      window.getSelection().removeAllRanges();
+      toast.style.display = 'inline';
+      setTimeout(function(){ toast.style.display = 'none'; }, 2800);
+    }
+  }
+
+  function resetAll() {
+    document.querySelectorAll('select').forEach(function(s){ s.value = ''; });
+    document.querySelectorAll('input[type="checkbox"]').forEach(function(c){ c.checked = false; });
+    document.getElementById('results-card').classList.remove('visible');
+    document.getElementById('verdict-box').innerHTML = '';
+    document.getElementById('next-steps-box').innerHTML = '';
+    document.getElementById('sp-output').textContent = '';
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+</script>
+
+</body>
+</html>
