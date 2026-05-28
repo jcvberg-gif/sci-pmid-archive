@@ -1,7 +1,197 @@
 {
   "version": 1,
-  "updated": "2026-05-14",
+  "updated": "2026-05-28",
   "entries": [
+    {
+      "pmid": "41362083",
+      "title": "Effectiveness of FES-assisted locomotor training on walking outcomes following incomplete SCI: SR and meta-analysis",
+      "journal": "",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-05-27",
+      "times_seen": 2,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "draft",
+        "sent"
+      ],
+      "themes": [
+        "T01",
+        "T09",
+        "OT01"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "sci_digest",
+          "source_date": "2026-04-25",
+          "tier": "HIGH",
+          "status": "draft"
+        },
+        {
+          "date": "2026-05-27",
+          "source": "sci_digest",
+          "tier": "SKIM",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "41701930",
+      "title": "Barriers and Enablers for Assistive Robotics Among People With SCI: Qualitative Study",
+      "journal": "JMIR Rehabilitation and Assistive Technologies",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-27",
+      "last_seen": "2026-05-27",
+      "times_seen": 1,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "OT04"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-27",
+          "source": "sci_digest",
+          "tier": "MEDIUM",
+          "status": "sent"
+        }
+      ],
+      "action_tags": [
+        "📚",
+        "🎓"
+      ]
+    },
+    {
+      "pmid": "41813431",
+      "title": "Assistive Robotic Arm for ADL in Tetraplegia: Feasibility Study Protocol",
+      "journal": "JMIR Research Protocols",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-27",
+      "last_seen": "2026-05-27",
+      "times_seen": 1,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "OT03",
+        "OT04"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-27",
+          "source": "sci_digest",
+          "tier": "MEDIUM",
+          "status": "sent"
+        }
+      ],
+      "action_tags": [
+        "🔬"
+      ]
+    },
+    {
+      "pmid": "41634345",
+      "title": "\"It Has to Work for Us\": Mental Health Module Co-Design in SCI Self-Maintenance Tool",
+      "journal": "Spinal Cord",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-27",
+      "last_seen": "2026-05-27",
+      "times_seen": 1,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "OT09"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-27",
+          "source": "sci_digest",
+          "tier": "MEDIUM",
+          "status": "sent"
+        }
+      ],
+      "action_tags": [
+        "🎓",
+        "📋"
+      ]
+    },
+    {
+      "pmid": "41037657",
+      "title": "Effects of Technology-Assisted Rehabilitation After SCI: Pilot RCT Crossover",
+      "journal": "JMIR Rehabilitation and Assistive Technologies",
+      "year": 2025,
+      "doi": null,
+      "first_seen": "2026-05-27",
+      "last_seen": "2026-05-27",
+      "times_seen": 1,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "OT04"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-27",
+          "source": "sci_digest",
+          "tier": "MEDIUM",
+          "status": "sent"
+        }
+      ],
+      "action_tags": [
+        "🎓",
+        "📝"
+      ]
+    },
+    {
+      "pmid": "40581436",
+      "title": "Pediatric SCI: Clinical and Rehabilitative Management Overview",
+      "journal": "PM&R Clinics of North America",
+      "year": 2025,
+      "doi": null,
+      "first_seen": "2026-05-27",
+      "last_seen": "2026-05-27",
+      "times_seen": 1,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "OT11"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-27",
+          "source": "sci_digest",
+          "tier": "SKIM",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
     {
       "pmid": "41853689",
       "title": "Neurogenic Bowel and Bladder Prevalence: 88-91% in 1,056 Brazilian SCI Patients",
@@ -38,12 +228,12 @@
         }
       ],
       "action_tags": [
-        "\ud83c\udfe5"
+        "🏥"
       ]
     },
     {
       "pmid": "41652436",
-      "title": "Walking rehabilitation in incomplete SCI: robotic exoskeleton-assisted training (RCT) \u2014 Fourier X2",
+      "title": "Walking rehabilitation in incomplete SCI: robotic exoskeleton-assisted training (RCT) — Fourier X2",
       "journal": "BioMedical Engineering OnLine",
       "year": 2026,
       "doi": "10.1186/s12938-026-01532-7",
@@ -79,7 +269,7 @@
         }
       ],
       "action_tags": [
-        "\ud83c\udfe5"
+        "🏥"
       ]
     },
     {
@@ -119,8 +309,8 @@
         }
       ],
       "action_tags": [
-        "\ud83c\udfe5",
-        "\ud83e\udd47"
+        "🏥",
+        "🥇"
       ]
     },
     {
@@ -160,8 +350,8 @@
         }
       ],
       "action_tags": [
-        "\ud83d\udccb",
-        "\ud83c\udfe5"
+        "📋",
+        "🏥"
       ],
       "source_status": [
         "sent"
@@ -203,9 +393,9 @@
         }
       ],
       "action_tags": [
-        "\ud83d\udcda",
-        "\ud83c\udf93",
-        "\ud83e\udd48"
+        "📚",
+        "🎓",
+        "🥈"
       ],
       "source_status": [
         "sent"
@@ -239,7 +429,7 @@
         }
       ],
       "action_tags": [
-        "\ud83e\udd49"
+        "🥉"
       ]
     },
     {
@@ -271,7 +461,7 @@
         }
       ],
       "action_tags": [
-        "\ud83c\udfe5"
+        "🏥"
       ]
     },
     {
@@ -302,7 +492,7 @@
         }
       ],
       "action_tags": [
-        "\ud83c\udfe5"
+        "🏥"
       ]
     },
     {
@@ -332,7 +522,7 @@
         }
       ],
       "action_tags": [
-        "\ud83c\udfe5"
+        "🏥"
       ]
     },
     {
@@ -363,7 +553,7 @@
         }
       ],
       "action_tags": [
-        "\ud83c\udf93"
+        "🎓"
       ]
     },
     {
@@ -564,36 +754,6 @@
           "source": "ai_health_digest",
           "source_date": "2026-04-25",
           "tier": "STRATEGIC",
-          "status": "draft"
-        }
-      ],
-      "action_tags": []
-    },
-    {
-      "pmid": "41362083",
-      "title": "Effectiveness of FES-assisted locomotor training on walking outcomes following incomplete SCI: SR and meta-analysis",
-      "journal": "",
-      "year": 2026,
-      "doi": null,
-      "first_seen": "2026-05-07",
-      "last_seen": "2026-05-07",
-      "times_seen": 1,
-      "sources": [
-        "sci_digest"
-      ],
-      "source_status": [
-        "draft"
-      ],
-      "themes": [
-        "T01",
-        "T09"
-      ],
-      "tier_history": [
-        {
-          "date": "2026-05-07",
-          "source": "sci_digest",
-          "source_date": "2026-04-25",
-          "tier": "HIGH",
           "status": "draft"
         }
       ],
@@ -1450,8 +1610,8 @@
         }
       ],
       "action_tags": [
-        "\ud83d\udcda",
-        "\ud83d\udd2c"
+        "📚",
+        "🔬"
       ],
       "source_status": [
         "draft"
@@ -1515,8 +1675,8 @@
         }
       ],
       "action_tags": [
-        "\ud83d\udcda",
-        "\ud83d\udd2c"
+        "📚",
+        "🔬"
       ],
       "source_status": []
     },
@@ -1549,9 +1709,9 @@
         }
       ],
       "action_tags": [
-        "\ud83d\udcdd",
-        "\ud83c\udf93",
-        "\ud83d\udd2c"
+        "📝",
+        "🎓",
+        "🔬"
       ],
       "source_status": []
     },
@@ -1614,9 +1774,9 @@
         }
       ],
       "action_tags": [
-        "\ud83d\udccb",
-        "\ud83d\udcdd",
-        "\ud83d\udce3"
+        "📋",
+        "📝",
+        "📣"
       ],
       "source_status": []
     }
