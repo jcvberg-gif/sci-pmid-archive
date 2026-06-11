@@ -1,7 +1,223 @@
 {
   "version": 1,
-  "updated": "2026-05-28",
+  "updated": "2026-06-11",
   "entries": [
+    {
+      "pmid": "41037657",
+      "title": "Effects of Technology-Assisted Rehabilitation After SCI: Pilot RCT Crossover",
+      "journal": "JMIR Rehabilitation and Assistive Technologies",
+      "year": 2025,
+      "doi": null,
+      "first_seen": "2026-05-27",
+      "last_seen": "2026-06-08",
+      "times_seen": 2,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "OT04",
+        "T14"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-27",
+          "source": "sci_digest",
+          "tier": "MEDIUM",
+          "status": "sent"
+        },
+        {
+          "date": "2026-06-08",
+          "source": "sci_digest",
+          "tier": "MEDIUM",
+          "status": "sent"
+        }
+      ],
+      "action_tags": [
+        "🎓",
+        "📝",
+        "✋"
+      ]
+    },
+    {
+      "pmid": "41853689",
+      "title": "Neurogenic Bowel and Bladder Prevalence: 88-91% in 1,056 Brazilian SCI Patients",
+      "journal": "Journal of Spinal Cord Medicine",
+      "year": 2026,
+      "doi": null,
+      "first_seen": "2026-05-07",
+      "last_seen": "2026-06-08",
+      "times_seen": 3,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "draft",
+        "sent"
+      ],
+      "themes": [
+        "T04",
+        "T07",
+        "T06",
+        "T16"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-07",
+          "source": "sci_digest",
+          "source_date": "2026-04-25",
+          "tier": "HIGH",
+          "status": "draft"
+        },
+        {
+          "date": "2026-05-11",
+          "source": "sci_digest",
+          "tier": "MEDIUM",
+          "status": "sent"
+        },
+        {
+          "date": "2026-06-08",
+          "source": "sci_digest",
+          "tier": "MEDIUM",
+          "status": "sent"
+        }
+      ],
+      "action_tags": [
+        "🏥",
+        "🩺"
+      ]
+    },
+    {
+      "pmid": "40778001",
+      "title": "Pressure Injury Prevention in SCI: AI Tools Emerging But Fundamentals Still Dominate",
+      "journal": "Journal of Surgery and Research",
+      "year": 2025,
+      "doi": null,
+      "first_seen": "2026-05-14",
+      "last_seen": "2026-06-08",
+      "times_seen": 2,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "T08",
+        "T07",
+        "T16"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-05-11",
+          "source": "sci_digest",
+          "tier": "MEDIUM",
+          "status": "sent"
+        },
+        {
+          "date": "2026-06-08",
+          "source": "sci_digest",
+          "tier": "MEDIUM",
+          "status": "sent"
+        }
+      ],
+      "action_tags": [
+        "🏥",
+        "🩺",
+        "🦿"
+      ]
+    },
+    {
+      "pmid": "41598814",
+      "title": "Combining SCES neuromodulation with stem cell therapy: next frontier for sensory-motor neuroplasticity after SCI (Gorgey group, VCU/Indiana)",
+      "journal": "Journal of Clinical Medicine",
+      "year": 2026,
+      "doi": "10.3390/jcm15020879",
+      "first_seen": "2026-06-08",
+      "last_seen": "2026-06-08",
+      "times_seen": 1,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "T10"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-06-08",
+          "source": "sci_digest",
+          "tier": "HIGH",
+          "status": "sent",
+          "label": "Top-3"
+        }
+      ],
+      "action_tags": [
+        "🦿",
+        "🩺"
+      ]
+    },
+    {
+      "pmid": "41345782",
+      "title": "AI outperforms clinicians in SCI outcome prediction: 23 studies, 120,931 patients — systematic review",
+      "journal": null,
+      "year": 2025,
+      "doi": null,
+      "first_seen": "2026-06-08",
+      "last_seen": "2026-06-08",
+      "times_seen": 1,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "T12"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-06-08",
+          "source": "sci_digest",
+          "tier": "MEDIUM",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
+    {
+      "pmid": "41798294",
+      "title": "AI pipeline with MRI radiomics achieves superior AIS grade prediction in traumatic cervical SCI — UCTransNet architecture",
+      "journal": "JOR Spine",
+      "year": 2026,
+      "doi": "10.1002/jsp2.70167",
+      "first_seen": "2026-06-08",
+      "last_seen": "2026-06-08",
+      "times_seen": 1,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "T11",
+        "T12"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-06-08",
+          "source": "sci_digest",
+          "tier": "MEDIUM",
+          "status": "sent"
+        }
+      ],
+      "action_tags": []
+    },
     {
       "pmid": "41362083",
       "title": "Effectiveness of FES-assisted locomotor training on walking outcomes following incomplete SCI: SR and meta-analysis",
@@ -134,37 +350,6 @@
       ]
     },
     {
-      "pmid": "41037657",
-      "title": "Effects of Technology-Assisted Rehabilitation After SCI: Pilot RCT Crossover",
-      "journal": "JMIR Rehabilitation and Assistive Technologies",
-      "year": 2025,
-      "doi": null,
-      "first_seen": "2026-05-27",
-      "last_seen": "2026-05-27",
-      "times_seen": 1,
-      "sources": [
-        "sci_digest"
-      ],
-      "source_status": [
-        "sent"
-      ],
-      "themes": [
-        "OT04"
-      ],
-      "tier_history": [
-        {
-          "date": "2026-05-27",
-          "source": "sci_digest",
-          "tier": "MEDIUM",
-          "status": "sent"
-        }
-      ],
-      "action_tags": [
-        "🎓",
-        "📝"
-      ]
-    },
-    {
       "pmid": "40581436",
       "title": "Pediatric SCI: Clinical and Rehabilitative Management Overview",
       "journal": "PM&R Clinics of North America",
@@ -191,45 +376,6 @@
         }
       ],
       "action_tags": []
-    },
-    {
-      "pmid": "41853689",
-      "title": "Neurogenic Bowel and Bladder Prevalence: 88-91% in 1,056 Brazilian SCI Patients",
-      "journal": "Journal of Spinal Cord Medicine",
-      "year": 2026,
-      "doi": null,
-      "first_seen": "2026-05-07",
-      "last_seen": "2026-05-14",
-      "times_seen": 2,
-      "sources": [
-        "sci_digest"
-      ],
-      "source_status": [
-        "draft",
-        "sent"
-      ],
-      "themes": [
-        "T04",
-        "T07"
-      ],
-      "tier_history": [
-        {
-          "date": "2026-05-07",
-          "source": "sci_digest",
-          "source_date": "2026-04-25",
-          "tier": "HIGH",
-          "status": "draft"
-        },
-        {
-          "date": "2026-05-11",
-          "source": "sci_digest",
-          "tier": "MEDIUM",
-          "status": "sent"
-        }
-      ],
-      "action_tags": [
-        "🏥"
-      ]
     },
     {
       "pmid": "41652436",
@@ -482,36 +628,6 @@
       "themes": [
         "T05",
         "T11"
-      ],
-      "tier_history": [
-        {
-          "date": "2026-05-11",
-          "source": "sci_digest",
-          "tier": "MEDIUM",
-          "status": "sent"
-        }
-      ],
-      "action_tags": [
-        "🏥"
-      ]
-    },
-    {
-      "pmid": "40778001",
-      "title": "Pressure Injury Prevention in SCI: AI Tools Emerging But Fundamentals Still Dominate",
-      "journal": "Journal of Surgery and Research",
-      "year": 2025,
-      "doi": null,
-      "first_seen": "2026-05-14",
-      "last_seen": "2026-05-14",
-      "times_seen": 1,
-      "sources": [
-        "sci_digest"
-      ],
-      "source_status": [
-        "sent"
-      ],
-      "themes": [
-        "T08"
       ],
       "tier_history": [
         {
