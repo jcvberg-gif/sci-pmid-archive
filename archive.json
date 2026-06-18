@@ -1,7 +1,46 @@
 {
   "version": 1,
-  "updated": "2026-06-11",
+  "updated": "2026-06-18",
   "entries": [
+    {
+      "pmid": "41345782",
+      "title": "AI outperforms clinicians in SCI outcome prediction: 23 studies, 120,931 patients \u2014 systematic review",
+      "journal": null,
+      "year": 2025,
+      "doi": null,
+      "first_seen": "2026-06-08",
+      "last_seen": "2026-06-15",
+      "times_seen": 2,
+      "sources": [
+        "sci_digest"
+      ],
+      "source_status": [
+        "sent"
+      ],
+      "themes": [
+        "T12",
+        "T11",
+        "T10"
+      ],
+      "tier_history": [
+        {
+          "date": "2026-06-08",
+          "source": "sci_digest",
+          "tier": "MEDIUM",
+          "status": "sent"
+        },
+        {
+          "date": "2026-06-15",
+          "source": "sci_digest",
+          "tier": "HIGH",
+          "status": "sent"
+        }
+      ],
+      "action_tags": [
+        "\ud83e\uddbf",
+        "\ud83e\udde0"
+      ]
+    },
     {
       "pmid": "41037657",
       "title": "Effects of Technology-Assisted Rehabilitation After SCI: Pilot RCT Crossover",
@@ -36,9 +75,9 @@
         }
       ],
       "action_tags": [
-        "🎓",
-        "📝",
-        "✋"
+        "\ud83c\udf93",
+        "\ud83d\udcdd",
+        "\u270b"
       ]
     },
     {
@@ -85,8 +124,8 @@
         }
       ],
       "action_tags": [
-        "🏥",
-        "🩺"
+        "\ud83c\udfe5",
+        "\ud83e\ude7a"
       ]
     },
     {
@@ -124,9 +163,9 @@
         }
       ],
       "action_tags": [
-        "🏥",
-        "🩺",
-        "🦿"
+        "\ud83c\udfe5",
+        "\ud83e\ude7a",
+        "\ud83e\uddbf"
       ]
     },
     {
@@ -157,41 +196,13 @@
         }
       ],
       "action_tags": [
-        "🦿",
-        "🩺"
+        "\ud83e\uddbf",
+        "\ud83e\ude7a"
       ]
     },
     {
-      "pmid": "41345782",
-      "title": "AI outperforms clinicians in SCI outcome prediction: 23 studies, 120,931 patients — systematic review",
-      "journal": null,
-      "year": 2025,
-      "doi": null,
-      "first_seen": "2026-06-08",
-      "last_seen": "2026-06-08",
-      "times_seen": 1,
-      "sources": [
-        "sci_digest"
-      ],
-      "source_status": [
-        "sent"
-      ],
-      "themes": [
-        "T12"
-      ],
-      "tier_history": [
-        {
-          "date": "2026-06-08",
-          "source": "sci_digest",
-          "tier": "MEDIUM",
-          "status": "sent"
-        }
-      ],
-      "action_tags": []
-    },
-    {
       "pmid": "41798294",
-      "title": "AI pipeline with MRI radiomics achieves superior AIS grade prediction in traumatic cervical SCI — UCTransNet architecture",
+      "title": "AI pipeline with MRI radiomics achieves superior AIS grade prediction in traumatic cervical SCI \u2014 UCTransNet architecture",
       "journal": "JOR Spine",
       "year": 2026,
       "doi": "10.1002/jsp2.70167",
@@ -283,8 +294,8 @@
         }
       ],
       "action_tags": [
-        "📚",
-        "🎓"
+        "\ud83d\udcda",
+        "\ud83c\udf93"
       ]
     },
     {
@@ -315,7 +326,7 @@
         }
       ],
       "action_tags": [
-        "🔬"
+        "\ud83d\udd2c"
       ]
     },
     {
@@ -345,8 +356,8 @@
         }
       ],
       "action_tags": [
-        "🎓",
-        "📋"
+        "\ud83c\udf93",
+        "\ud83d\udccb"
       ]
     },
     {
@@ -379,7 +390,7 @@
     },
     {
       "pmid": "41652436",
-      "title": "Walking rehabilitation in incomplete SCI: robotic exoskeleton-assisted training (RCT) — Fourier X2",
+      "title": "Walking rehabilitation in incomplete SCI: robotic exoskeleton-assisted training (RCT) \u2014 Fourier X2",
       "journal": "BioMedical Engineering OnLine",
       "year": 2026,
       "doi": "10.1186/s12938-026-01532-7",
@@ -415,7 +426,7 @@
         }
       ],
       "action_tags": [
-        "🏥"
+        "\ud83c\udfe5"
       ]
     },
     {
@@ -455,8 +466,8 @@
         }
       ],
       "action_tags": [
-        "🏥",
-        "🥇"
+        "\ud83c\udfe5",
+        "\ud83e\udd47"
       ]
     },
     {
@@ -496,8 +507,8 @@
         }
       ],
       "action_tags": [
-        "📋",
-        "🏥"
+        "\ud83d\udccb",
+        "\ud83c\udfe5"
       ],
       "source_status": [
         "sent"
@@ -539,9 +550,9 @@
         }
       ],
       "action_tags": [
-        "📚",
-        "🎓",
-        "🥈"
+        "\ud83d\udcda",
+        "\ud83c\udf93",
+        "\ud83e\udd48"
       ],
       "source_status": [
         "sent"
@@ -575,7 +586,7 @@
         }
       ],
       "action_tags": [
-        "🥉"
+        "\ud83e\udd49"
       ]
     },
     {
@@ -607,7 +618,7 @@
         }
       ],
       "action_tags": [
-        "🏥"
+        "\ud83c\udfe5"
       ]
     },
     {
@@ -638,7 +649,7 @@
         }
       ],
       "action_tags": [
-        "🏥"
+        "\ud83c\udfe5"
       ]
     },
     {
@@ -669,7 +680,7 @@
         }
       ],
       "action_tags": [
-        "🎓"
+        "\ud83c\udf93"
       ]
     },
     {
@@ -1726,8 +1737,8 @@
         }
       ],
       "action_tags": [
-        "📚",
-        "🔬"
+        "\ud83d\udcda",
+        "\ud83d\udd2c"
       ],
       "source_status": [
         "draft"
@@ -1791,8 +1802,8 @@
         }
       ],
       "action_tags": [
-        "📚",
-        "🔬"
+        "\ud83d\udcda",
+        "\ud83d\udd2c"
       ],
       "source_status": []
     },
@@ -1825,9 +1836,9 @@
         }
       ],
       "action_tags": [
-        "📝",
-        "🎓",
-        "🔬"
+        "\ud83d\udcdd",
+        "\ud83c\udf93",
+        "\ud83d\udd2c"
       ],
       "source_status": []
     },
@@ -1890,9 +1901,9 @@
         }
       ],
       "action_tags": [
-        "📋",
-        "📝",
-        "📣"
+        "\ud83d\udccb",
+        "\ud83d\udcdd",
+        "\ud83d\udce3"
       ],
       "source_status": []
     }
