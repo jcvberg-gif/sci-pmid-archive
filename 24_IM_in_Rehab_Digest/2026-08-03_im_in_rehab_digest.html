@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IM in Rehab Digest — Week of 2026-08-03</title>
+<style>
+  /* Reset & base */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px; line-height: 1.6;
+    background: #f4f6f9; color: #1a1a2e;
+    padding: 24px 16px;
+  }
+  a { color: #0066cc; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Layout */
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #1a3a5c 0%, #0d6efd 100%);
+    color: #fff; border-radius: 10px; padding: 28px 32px; margin-bottom: 20px;
+  }
+  .header h1 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+  .header .meta { font-size: 13px; opacity: 0.88; line-height: 1.8; }
+  .header .stats {
+    display: flex; gap: 12px; flex-wrap: wrap;
+    margin-top: 14px;
+  }
+  .stat-pill {
+    background: rgba(255,255,255,0.18); border-radius: 20px;
+    padding: 4px 14px; font-size: 13px; font-weight: 600;
+  }
+  .stat-pill.high { background: rgba(255,215,0,0.28); }
+
+  /* MSU library banner */
+  .msu-banner {
+    background: #fff3cd; border: 1px solid #ffc107; border-radius: 8px;
+    padding: 12px 18px; margin-bottom: 24px; font-size: 14px;
+  }
+  .msu-banner a { color: #7c5c00; font-weight: 600; }
+
+  /* Bucket heading */
+  .bucket-heading {
+    font-size: 13px; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: #4a6fa5;
+    border-bottom: 2px solid #4a6fa5; padding-bottom: 4px;
+    margin: 32px 0 14px;
+  }
+
+  /* Paper card */
+  .paper {
+    background: #fff; border-radius: 10px;
+    border: 1px solid #e0e6f0;
+    padding: 20px 22px; margin-bottom: 14px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  .paper-header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+  .paper-num {
+    font-weight: 700; color: #6c757d; font-size: 13px;
+    flex-shrink: 0; padding-top: 2px;
+  }
+  .paper-title-block { flex: 1; }
+  .tier-badge {
+    display: inline-block; border-radius: 4px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+    padding: 2px 8px; margin-bottom: 4px; text-transform: uppercase;
+  }
+  .tier-high { background: #fff3cd; color: #7c5c00; border: 1px solid #ffd44d; }
+  .tier-top3 { background: #ffd700; color: #3a2e00; border: 1px solid #b8960c; }
+  .tier-medium { background: #e8f4fd; color: #0d5d9e; border: 1px solid #aad4f0; }
+  .tier-low { background: #f8f9fa; color: #6c757d; border: 1px solid #ced4da; }
+  .paper-title { font-size: 15px; font-weight: 700; color: #1a1a2e; line-height: 1.4; }
+  .paper-citation {
+    font-size: 12.5px; color: #6c757d; margin-top: 4px;
+  }
+  .paper-citation a { color: #0066cc; }
+  .paper-body { margin-top: 12px; }
+  .field { margin-bottom: 8px; font-size: 14px; }
+  .field-label { font-weight: 700; color: #1a1a2e; }
+  .rehab-take {
+    background: #eef7ee; border-left: 4px solid #28a745;
+    border-radius: 0 6px 6px 0; padding: 10px 14px; margin-top: 10px;
+    font-size: 14px;
+  }
+  .rehab-take strong { color: #155724; }
+  hr.divider { border: none; border-top: 1px solid #e0e6f0; margin: 6px 0 0; }
+
+  /* Top 3 table */
+  .top3-section {
+    background: linear-gradient(135deg, #fff8dc 0%, #fffaed 100%);
+    border: 2px solid #ffd700; border-radius: 10px;
+    padding: 22px 24px; margin: 28px 0;
+  }
+  .top3-section h2 { font-size: 17px; margin-bottom: 14px; color: #3a2e00; }
+  .top3-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  .top3-table th {
+    background: #ffd700; color: #3a2e00; font-weight: 700;
+    padding: 8px 12px; text-align: left;
+  }
+  .top3-table td { padding: 10px 12px; border-bottom: 1px solid #ffe680; }
+  .top3-table tr:last-child td { border-bottom: none; }
+  .top3-table .rank { font-size: 18px; font-weight: 800; color: #b8960c; white-space: nowrap; }
+  .closing { font-size: 14px; color: #4a4a4a; margin-top: 14px; line-height: 1.6; }
+
+  /* Footer */
+  .footer {
+    text-align: center; font-size: 12px; color: #888;
+    margin-top: 32px; padding-top: 16px;
+    border-top: 1px solid #e0e6f0;
+  }
+  .footer a { color: #4a6fa5; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- HEADER -->
+<div class="header">
+  <h1>📋 IM in Rehab Digest — Week of 2026-08-03 &nbsp;|&nbsp; ISO Week 32</h1>
+  <div class="meta">
+    <strong>For:</strong> Jon VandenBerg, MD | Physiatrist · SCI/IRF · Mary Free Bed Rehabilitation Hospital<br>
+    <strong>Generated:</strong> 2026-08-03 &nbsp;|&nbsp; <strong>Buckets:</strong> IM01 HTN · IM02 DM · IM03 AKI · IM04 CHF · IM05 AFib · IM06 COPD · IM07 Aspiration · IM08 UTI · IM09 Delirium · IM10 Polypharmacy
+  </div>
+  <div class="stats">
+    <span class="stat-pill">13 Papers</span>
+    <span class="stat-pill high">⭐ 6 HIGH</span>
+    <span class="stat-pill">7 MEDIUM</span>
+    <span class="stat-pill">0 LOW</span>
+    <span class="stat-pill">13 Unique PMIDs</span>
+  </div>
+</div>
+
+<!-- MSU Banner -->
+<div class="msu-banner">
+  📚 <strong>Need full text?</strong> MSU Health &amp; Medicine library databases: <a href="https://lib.msu.edu/health/med-db">https://lib.msu.edu/health/med-db</a>
+</div>
+
+<!-- IM01 HTN -->
+<div class="bucket-heading">IM01 — Hypertension</div>
+
+<div class="paper">
+  <div class="paper-header">
+    <div class="paper-num">1.</div>
+    <div class="paper-title-block">
+      <span class="tier-badge tier-high">⭐ HIGH</span>
+      <div class="paper-title">AHA statement: treat the cause before escalating BP meds in hospitalized patients</div>
+    </div>
+  </div>
+  <div class="paper-citation">
+    PMID <a href="https://pubmed.ncbi.nlm.nih.gov/38804130/">38804130</a> &nbsp;·&nbsp;
+    <em>Hypertension</em> · 2024 | IM01
+  </div>
+  <div class="paper-body">
+    <div class="field"><span class="field-label">Key outcomes:</span> No existing guidelines define inpatient BP goals or recommend routine pharmacological escalation for asymptomatic moderately elevated BP. For hypertensive emergency (new or worsening target-organ damage), IV antihypertensives are appropriate. For asymptomatic elevation, best evidence supports addressing underlying causes first; IV agents risk overcorrection and iatrogenic harm.</div>
+    <div class="field"><span class="field-label">Methods:</span> AHA scientific statement; systematic literature review and expert consensus on inpatient BP management across acute care settings. AHA Writing Group. <em>Hypertension</em> 2024 (DOI 10.1161/HYP.0000000000000238).</div>
+    <div class="rehab-take"><strong>Rehab take:</strong> Before adding antihypertensives for an unexplained BP spike in an IRF patient, rule out the classic SCI/rehab triggers: autonomic dysreflexia (most urgently), pain, missed home medications, bladder or bowel distension, and anxiety. This statement provides institutional backing for a "treat the cause first" order set at MFB.</div>
+  </div>
+</div>
+
+<!-- IM02 DM -->
+<div class="bucket-heading">IM02 — Diabetes Mellitus</div>
+
+<div class="paper">
+  <div class="paper-header">
+    <div class="paper-num">2.</div>
+    <div class="paper-title-block">
+      <span class="tier-badge tier-top3">⭐⭐ TOP 3 #1</span>
+      <div class="paper-title">ADA 2026 endorses inpatient CGM and AID continuation; glycemic target 100–180 mg/dL for non-ICU</div>
+    </div>
+  </div>
+  <div class="paper-citation">
+    PMID <a href="https://pubmed.ncbi.nlm.nih.gov/41358892/">41358892</a> &nbsp;·&nbsp;
+    <em>Diabetes Care</em> · 2026 | IM02
+  </div>
+  <div class="paper-body">
+    <div class="field"><span class="field-label">Key outcomes:</span> Non-ICU inpatient glycemic target: 100–180 mg/dL. ICU target: 140–180 mg/dL. Continuation of personal CGM during hospitalization explicitly recommended when clinically appropriate (confirmatory POC glucose required for insulin dosing). AID systems and insulin pumps should be continued under institutional protocols. Discharge diabetes self-management education established as a formal care standard.</div>
+    <div class="field"><span class="field-label">Methods:</span> ADA Standards of Care annual update, Chapter 16. Expert systematic evidence review by ADA writing committee. <em>Diabetes Care</em> 49(Suppl 1):S339–S355, January 2026.</div>
+    <div class="rehab-take"><strong>Rehab take:</strong> ADA 2026 provides the clinical authority MFB needs for a written inpatient CGM/AID protocol. Patients arriving on home CGM or insulin pump systems should continue them with a confirmatory POC glucose workflow for nursing. Discharge glycemic education initiated on the IRF satisfies ADA 2026 and may reduce 30-day readmissions.</div>
+  </div>
+</div>
+
+<div class="paper">
+  <div class="paper-header">
+    <div class="paper-num">3.</div>
+    <div class="paper-title-block">
+      <span class="tier-badge tier-medium">MEDIUM</span>
+      <div class="paper-title">Inpatient automated insulin delivery: feasibility confirmed in AIDING trial, but institutional barriers persist</div>
+    </div>
+  </div>
+  <div class="paper-citation">
+    PMID <a href="https://pubmed.ncbi.nlm.nih.gov/41764080/">41764080</a> &nbsp;·&nbsp;
+    <em>Journal of Diabetes Science and Technology</em> · 2026 | IM02
+  </div>
+  <div class="paper-body">
+    <div class="field"><span class="field-label">Key outcomes:</span> AIDING feasibility trial: hospitalized patients with diabetes on Omnipod 5 + Dexcom G7 AID system achieved higher time-in-range vs. conventional multiple daily insulin injections + CGM. Narrative review identifies persistent barriers: supply logistics, nursing competency training, formulary restrictions, and institutional liability.</div>
+    <div class="rehab-take"><strong>Rehab take:</strong> AID feasibility in hospitals is now proven; MFB as an early-adopter IRF should begin developing a nursing AID protocol so complex rehab patients with labile glycemia can safely remain on their home AID systems throughout admission.</div>
+  </div>
+</div>
+
+<div class="paper">
+  <div class="paper-header">
+    <div class="paper-num">4.</div>
+    <div class="paper-title-block">
+      <span class="tier-badge tier-medium">MEDIUM</span>
+      <div class="paper-title">System-wide glucose dashboard measurably improves hypo- and hyperglycemia rates across 7 hospitals</div>
+    </div>
+  </div>
+  <div class="paper-citation">
+    PMID <a href="https://pubmed.ncbi.nlm.nih.gov/41529840/">41529840</a> &nbsp;·&nbsp;
+    <em>Journal of Diabetes Science and Technology</em> · 2026 | IM02
+  </div>
+  <div class="paper-body">
+    <div class="field"><span class="field-label">Key outcomes:</span> 455,303 hospital admissions analyzed (January 2018–March 2025) across a 7-hospital health system. Post-dashboard implementation (2023–2025): improvements in patient-days with hypoglycemia (&lt;70 mg/dL) and hyperglycemia (mean &gt;180 mg/dL), plus in-hospital mortality, length of stay, and 30-day readmission rates.</div>
+    <div class="rehab-take"><strong>Rehab take:</strong> A QI glucose dashboard at MFB could serve as an IRF-wide glycemic surveillance tool, surfacing unit-level hypo/hyperglycemia trends and driving standardization of insulin protocols across nursing shifts and care teams.</div>
+  </div>
+</div>
+
+<!-- IM03 AKI -->
+<div class="bucket-heading">IM03 — AKI / Contrast Nephropathy</div>
+
+<div class="paper">
+  <div class="paper-header">
+    <div class="paper-num">5.</div>
+    <div class="paper-title-block">
+      <span class="tier-badge tier-medium">MEDIUM</span>
+      <div class="paper-title">New Norwegian ICU cohort examines contrast-associated AKI incidence and recovery trajectory (August 2026)</div>
+    </div>
+  </div>
+  <div class="paper-citation">
+    PMID <a href="https://pubmed.ncbi.nlm.nih.gov/42380724/">42380724</a> &nbsp;·&nbsp;
+    <em>Acta Anaesthesiologica Scandinavica</em> · August 2026 | IM03
+  </div>
+  <div class="paper-body">
+    <div class="field"><span class="field-label">Key outcomes:</span> Retrospective Norwegian ICU cohort (Mo, Klepstad, Bjelland) examining incidence and recovery of AKI following IV contrast exposure. Most recent ICU-based data on contrast-AKI epidemiology and recovery; full quantitative outcomes require direct full-text access.</div>
+    <div class="rehab-take"><strong>Rehab take:</strong> Many IRF admissions follow recent contrast-enhanced CT or coronary angiography. Screen admission creatinine and eGFR in all such patients; hold nephrotoxic agents (NSAIDs, aminoglycosides) until renal function trends are confirmed stable over 48–72 hours on the unit.</div>
+  </div>
+</div>
+
+<!-- IM04 CHF -->
+<div class="bucket-heading">IM04 — CHF / Post-MI</div>
+
+<div class="paper">
+  <div class="paper-header">
+    <div class="paper-num">6.</div>
+    <div class="paper-title-block">
+      <span class="tier-badge tier-high">⭐ HIGH</span>
+      <div class="paper-title">Telehealth cardiac rehab matches centre-based outcomes in heart failure: systematic review of 14 RCTs (N=7,371)</div>
+    </div>
+  </div>
+  <div class="paper-citation">
+    PMID <a href="https://pubmed.ncbi.nlm.nih.gov/41597311/">41597311</a> &nbsp;·&nbsp;
+    <em>Medicina</em> · 2025 | IM04
+  </div>
+  <div class="paper-body">
+    <div class="field"><span class="field-label">Key outcomes:</span> 14 RCTs, N=7,371 participants. Telehealth-based CR comparable to centre-based CR on primary outcomes (6MWT and peak VO₂); clinically meaningful improvements over usual care in QoL and adherence. Access and participation significantly improved with telehealth delivery.</div>
+    <div class="field"><span class="field-label">Methods:</span> PRISMA 2020 systematic review + meta-analysis of RCTs (2020–2025). Databases: PubMed, Medline, CINAHL, EMBASE, Web of Science. Outcomes: 6MWT, peak VO₂, QoL, adherence, satisfaction, clinical events. <em>Medicina</em> 62(1):25, December 2025.</div>
+    <div class="rehab-take"><strong>Rehab take:</strong> Heart failure patients discharged from MFB IRF can be safely transitioned to a telehealth CR program with equivalent outcomes to traditional site-based programs. This is a practical discharge planning option when patient transport or geographic access is a barrier — incorporate into routine HF discharge discussions.</div>
+  </div>
+</div>
+
+<!-- IM05 AFib -->
+<div class="bucket-heading">IM05 — AFib &amp; Anticoagulation</div>
+
+<div class="paper">
+  <div class="paper-header">
+    <div class="paper-num">7.</div>
+    <div class="paper-title-block">
+      <span class="tier-badge tier-top3">⭐⭐ TOP 3 #2</span>
+      <div class="paper-title">RCT meta-analysis confirms early DOAC after AF-related ischemic stroke is safe and non-inferior to delayed strategy</div>
+    </div>
+  </div>
+  <div class="paper-citation">
+    PMID <a href="https://pubmed.ncbi.nlm.nih.gov/41697537/">41697537</a> &nbsp;·&nbsp;
+    <em>February 2026</em> · 2026 | IM05
+  </div>
+  <div class="paper-body">
+    <div class="field"><span class="field-label">Key outcomes:</span> Meta-analysis of RCTs (systematic search through June 2025): early anticoagulation after acute ischemic stroke in AF patients showed composite primary outcome (recurrent ischemic stroke, symptomatic ICH, or death) comparable to delayed initiation. No statistically significant increase in symptomatic ICH with early strategy. Results support early DOAC initiation in patients with predominantly mild-to-moderate ischemic stroke.</div>
+    <div class="field"><span class="field-label">Methods:</span> Systematic review and meta-analysis of RCTs. Databases searched: PubMed, Embase, Cochrane CENTRAL, ScienceDirect (through June 2025). Population: adults with acute ischemic stroke + AF. Outcomes: composite of recurrent ischemic stroke, symptomatic ICH, death; functional independence. Published February 2026.</div>
+    <div class="rehab-take"><strong>Rehab take:</strong> For stroke patients arriving to MFB IRF still in the acute-to-subacute anticoagulation decision window, early DOAC initiation appears safe in mild-to-moderate strokes. Confirm anticoagulation status on every AF + stroke admission; if not started, prompt neurology for a timing discussion before the window closes.</div>
+  </div>
+</div>
+
+<div class="paper">
+  <div class="paper-header">
+    <div class="paper-num">8.</div>
+    <div class="paper-title-block">
+      <span class="tier-badge tier-medium">MEDIUM</span>
+      <div class="paper-title">Subclinical AFib screening detects more arrhythmia but RCTs show no anticoagulation benefit</div>
+    </div>
+  </div>
+  <div class="paper-citation">
+    PMID <a href="https://pubmed.ncbi.nlm.nih.gov/42384436/">42384436</a> &nbsp;·&nbsp;
+    <em>2026 Review</em> · 2026 | IM05
+  </div>
+  <div class="paper-body">
+    <div class="field"><span class="field-label">Key outcomes:</span> Device-detected AFib episodes ≥6 minutes elevate stroke risk by 2–2.5× vs. no subclinical AF, but absolute risk remains substantially lower than clinically evident AF. Screening increases detection rates without improving outcomes (LOOP, NOAH-AFNET 6, ARTESiA trials). Routine oral anticoagulation for subclinical AFib showed no consistent clinical benefit across randomized trials.</div>
+    <div class="rehab-take"><strong>Rehab take:</strong> Continuous cardiac monitoring in the IRF often incidentally detects brief subclinical AFib. Per this review, brief asymptomatic episodes should prompt documentation and cardiology communication, but routine DOAC initiation is not yet evidence-based. Avoid reflexive anticoagulation without shared decision-making and risk-benefit discussion.</div>
+  </div>
+</div>
+
+<!-- IM06 COPD -->
+<div class="bucket-heading">IM06 — COPD / Asthma</div>
+
+<div class="paper">
+  <div class="paper-header">
+    <div class="paper-num">9.</div>
+    <div class="paper-title-block">
+      <span class="tier-badge tier-medium">MEDIUM</span>
+      <div class="paper-title">All pulmonary rehab delivery models improve COPD outcomes; participation matters more than format</div>
+    </div>
+  </div>
+  <div class="paper-citation">
+    PMID <a href="https://pubmed.ncbi.nlm.nih.gov/41461647/">41461647</a> &nbsp;·&nbsp;
+    <em>2025 Network Meta-Analysis</em> · 2025 | IM06
+  </div>
+  <div class="paper-body">
+    <div class="field"><span class="field-label">Key outcomes:</span> 33 studies (N=2,538); 27 studies (N=2,106) included in network meta-analysis. All delivery models — centre-based, home-based, telerehab — improved dyspnea, 6MWT, and health-related QoL vs. no PR. Certainty of evidence rated LOW for all outcomes due to high risk of bias (22/33 studies) and imprecision.</div>
+    <div class="rehab-take"><strong>Rehab take:</strong> For COPD patients discharged from MFB IRF, any accessible format of pulmonary rehab is better than none. Connect patients to the nearest and most logistically feasible option — telerehab if distance or mobility limits centre-based attendance — rather than delaying enrollment waiting for preferred format availability.</div>
+  </div>
+</div>
+
+<!-- IM07 Aspiration -->
+<div class="bucket-heading">IM07 — Aspiration Pneumonia</div>
+
+<div class="paper">
+  <div class="paper-header">
+    <div class="paper-num">10.</div>
+    <div class="paper-title-block">
+      <span class="tier-badge tier-medium">MEDIUM</span>
+      <div class="paper-title">Ethnographic study reveals mealtime implementation gaps between SLP dysphagia orders and bedside nursing practice</div>
+    </div>
+  </div>
+  <div class="paper-citation">
+    PMID <a href="https://pubmed.ncbi.nlm.nih.gov/42500843/">42500843</a> &nbsp;·&nbsp;
+    <em>International Journal of Language and Communication Disorders</em> · 2026 | IM07
+  </div>
+  <div class="paper-body">
+    <div class="field"><span class="field-label">Key outcomes:</span> Participant observation of 10 acute stroke patients during mealtimes in the first 72 hours of admission. Barriers to implementing SLP dysphagia recommendations: competing nursing priorities, inadequate shift-change handoff of specific dysphagia instructions, inconsistent oral hygiene, and improper head/trunk positioning. Facilitators: interprofessional communication, patient/family engagement.</div>
+    <div class="rehab-take"><strong>Rehab take:</strong> Even at MFB with a strong SLP program, mealtime implementation of dysphagia precautions is a nursing-execution challenge. Explicit visible cues at the bedside — beyond the SLP note in the chart — for positioning, diet consistency, oral hygiene, and cueing strategies reduce aspiration risk, particularly at shift transitions and during weekends.</div>
+  </div>
+</div>
+
+<!-- IM08 UTI -->
+<div class="bucket-heading">IM08 — Urinary Tract Infection</div>
+
+<div class="paper">
+  <div class="paper-header">
+    <div class="paper-num">11.</div>
+    <div class="paper-title-block">
+      <span class="tier-badge tier-medium">MEDIUM</span>
+      <div class="paper-title">UA-to-culture reflex protocol drives high rates of inappropriate ASB treatment despite IDSA guidelines</div>
+    </div>
+  </div>
+  <div class="paper-citation">
+    PMID <a href="https://pubmed.ncbi.nlm.nih.gov/40989674/">40989674</a> &nbsp;·&nbsp;
+    <em>Antimicrobial Stewardship &amp; Healthcare Epidemiology</em> · 2025 | IM08
+  </div>
+  <div class="paper-body">
+    <div class="field"><span class="field-label">Key outcomes:</span> Institutional UA-to-UC reflex protocol (UA positive for pyuria &gt;10 WBC/HPF, leukocyte esterase, or nitrites → automatic reflex to culture): only 30.1% of ordered UAs triggered a UC reflex; of those, &gt;50% of UC results were negative. System-wide, 45–83% of patients still received inappropriate antibiotics for asymptomatic bacteriuria (ASB) despite IDSA guideline recommendations against treatment.</div>
+    <div class="rehab-take"><strong>Rehab take:</strong> SCI patients on MFB IRF routinely have pyuria and bacteriuria without symptoms. Reflex UA→culture ordering patterns drive inappropriate antibiotic treatment and resistance. A symptom-based UTI ordering protocol is an actionable antimicrobial stewardship target — especially in the SCI population where antibiotic overuse accelerates resistant organism colonization.</div>
+  </div>
+</div>
+
+<!-- IM09 Delirium -->
+<div class="bucket-heading">IM09 — Delirium / Dementia</div>
+
+<div class="paper">
+  <div class="paper-header">
+    <div class="paper-num">12.</div>
+    <div class="paper-title-block">
+      <span class="tier-badge tier-high">⭐ HIGH</span>
+      <div class="paper-title">ABCDEF bundle and family engagement independently reduce ICU delirium: meta-review of 32 systematic reviews</div>
+    </div>
+  </div>
+  <div class="paper-citation">
+    PMID <a href="https://pubmed.ncbi.nlm.nih.gov/41272698/">41272698</a> &nbsp;·&nbsp;
+    <em>Critical Care</em> · 2026 | IM09
+  </div>
+  <div class="paper-body">
+    <div class="field"><span class="field-label">Key outcomes:</span> Meta-review of 32 SRs/meta-analyses encompassing 335 primary studies, evaluating 16 non-pharmacological interventions. ABCDEF bundle and multicomponent interventions significantly reduced delirium incidence and duration. Early mobilization independently reduced delirium. Family participation in care independently reduced delirium incidence. Multicomponent interventions associated with mortality benefits.</div>
+    <div class="field"><span class="field-label">Methods:</span> Systematic meta-review of systematic reviews and meta-analyses; Part 2 (non-pharmacological + multicomponent interventions). Eight databases searched from inception to August 2025. <em>Critical Care</em>, DOI 10.1186/s13054-025-05726-8, 2026.</div>
+    <div class="rehab-take"><strong>Rehab take:</strong> IRF is ideally positioned to operationalize ABCDEF elements: structured sleep/wake cycles, pain optimization, delirium screening, early mobilization (a core IRF function), and active family engagement. MFB should embed explicit delirium prevention bundles in admission protocols for high-risk populations — TBI, stroke, post-ICU, and elderly with polypharmacy.</div>
+  </div>
+</div>
+
+<!-- IM10 Polypharmacy -->
+<div class="bucket-heading">IM10 — Polypharmacy / Beers</div>
+
+<div class="paper">
+  <div class="paper-header">
+    <div class="paper-num">13.</div>
+    <div class="paper-title-block">
+      <span class="tier-badge tier-top3">⭐⭐ TOP 3 #3</span>
+      <div class="paper-title">Polypharmacy at IRF discharge independently predicts worse ADL recovery, especially in stroke and deconditioning (N=1,903)</div>
+    </div>
+  </div>
+  <div class="paper-citation">
+    PMID <a href="https://pubmed.ncbi.nlm.nih.gov/41408196/">41408196</a> &nbsp;·&nbsp;
+    <em>BMC Geriatrics</em> · 2025 | IM10
+  </div>
+  <div class="paper-body">
+    <div class="field"><span class="field-label">Key outcomes:</span> N=1,903 patients aged ≥65 years in a Japanese convalescent rehabilitation hospital (April 2017–March 2024). 62.1% had polypharmacy (≥6 concurrent prescription medications) at discharge; 76.4% were aged ≥80 years. Polypharmacy at discharge independently and negatively associated with functional recovery (FIM gain, Barthel Index gain), with the strongest association in cerebrovascular disease and disuse syndrome groups.</div>
+    <div class="field"><span class="field-label">Methods:</span> Retrospective observational study of older rehabilitation inpatients. Polypharmacy defined as ≥6 regular prescription medications at discharge. Functional outcomes: FIM gain and Barthel Index gain. Subgroup analysis by rehabilitation diagnostic category. <em>BMC Geriatrics</em> 25 (2025).</div>
+    <div class="rehab-take"><strong>Rehab take:</strong> Every MFB IRF discharge is an opportunity to deprescribe. This study — the largest available specifically in rehabilitation inpatients — directly supports a standing pharmacist consult on admission for all patients ≥80 years with ≥6 medications, targeting stroke and deconditioning patients where polypharmacy most strongly limits ADL gains. Review meds before discharge, not just at admission.</div>
+  </div>
+</div>
+
+<!-- TOP 3 SUMMARY -->
+<div class="top3-section">
+  <h2>⭐⭐ Top 3 This Week — August 2026 (ISO Week 32)</h2>
+  <table class="top3-table">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>PMID</th>
+        <th>Bucket</th>
+        <th>Headline</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="rank">#1</td>
+        <td><a href="https://pubmed.ncbi.nlm.nih.gov/41358892/">41358892</a></td>
+        <td><strong>IM02 DM</strong></td>
+        <td>ADA 2026 formally endorses inpatient CGM + AID continuation; glycemic target 100–180 mg/dL for non-ICU</td>
+      </tr>
+      <tr>
+        <td class="rank">#2</td>
+        <td><a href="https://pubmed.ncbi.nlm.nih.gov/41697537/">41697537</a></td>
+        <td><strong>IM05 AFib</strong></td>
+        <td>RCT meta-analysis: early DOAC after AF-related ischemic stroke is safe and non-inferior to delayed strategy</td>
+      </tr>
+      <tr>
+        <td class="rank">#3</td>
+        <td><a href="https://pubmed.ncbi.nlm.nih.gov/41408196/">41408196</a></td>
+        <td><strong>IM10 Polypharmacy</strong></td>
+        <td>N=1,903 rehab inpatients: ≥6 medications at discharge independently predicts worse ADL recovery in stroke and deconditioning</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="closing" style="margin-top:14px;">These three represent the clearest, most immediately actionable evidence for IRF practice this week: updated glycemic standards that should drive new inpatient protocols, anticoagulation timing guidance relevant to every post-stroke transfer, and strong rehabilitation-specific evidence that medication burden at discharge directly limits functional recovery.</p>
+</div>
+
+<!-- MSU Footer -->
+<div class="msu-banner" style="margin-bottom:0;">
+  📚 <strong>Need full text?</strong> MSU Health &amp; Medicine library databases: <a href="https://lib.msu.edu/health/med-db">https://lib.msu.edu/health/med-db</a>
+</div>
+
+<div class="footer">
+  <p><em>IM in Rehab Digest</em> is generated weekly for clinical education and awareness. Consult primary literature and current clinical guidelines before making patient care decisions.</p>
+</div>
+
+</div>
+</body>
+</html>
